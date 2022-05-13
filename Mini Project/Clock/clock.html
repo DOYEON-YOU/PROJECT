@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clock.html</title>
+</head>
+
+<body>
+  <h1>아날로그 시계</h1>
+  <canvas id="myCanvas" width="300" height="300"></canvas>
+  <p></p>
+  <script>
+    let canvas = document.querySelector("#myCanvas");
+    let context = canvas.getContext("2d");
+
+    let dialImg = new Image();
+    let hourImg = new Image();
+    let minImg = new Image();
+    let secImg = new Image();
+    let pointImg = new Image();
+
+    dialImg.src = "images/dial.png";
+    secImg.src = "images/pin_1.png";
+    minImg.src = "images/pin_2.png";
+    hourImg.src = "images/pin_3.png";
+    pointImg.src = "images/clock_point.png";
+
+    setInterval(function () {
+      let d = new Date();
+      //초 
+      let sec = d.getSeconds();
+      //초침의 회전량(rad)
+      let rSec = sec * 6 * Math.PI / 180;
+      //분
+      let min = d.getMinutes();
+      //분침의 회전량
+      let rMin = min * 6 * Math.PI / 180 + (sec / 60) * 6 * Math.PI / 180;
+      //시
+      let hour = d.getHours();
+      //시침의 회전량
+      let rHour = hour * 30 * Math.PI / 180 + (min / 60) * 30 * Math.PI / 180;
+
+      context.drawImage(dialImg, 0, 0, 300, 300);
+
+      //context 의 정상상태(변화를 가하지 않은 상태)를 저장한다.
+      context.save();
+      //canvas 의 중앙으로 context 를 평행이동한다.
+      context.translate(150, 150);
+      //context 회전 (rad)
+      context.rotate(rSec);
+      //초침을 그린다.
+      context.drawImage(secImg, -10, -120, 20, 120);
+
+      //분침을 그리기 위한 context 회전
+      context.rotate(rMin - rSec);
+      //분침 그리기
+      context.drawImage(minImg, -10, -120, 20, 120);
+
+      //시침을 그리기 위한 context 회전
+      context.rotate(rHour - rMin);
+      context.drawImage(hourImg, -10, -120, 20, 120);
+
+      //시계 가운데 point 그리기
+      context.drawImage(pointImg, -10, -10, 20, 20);
+
+      //저장되었던 context 의 정상 상태로 되돌린다.
+      context.restore();
+
+    }, 10);
+  </script>
+</body>
+
+</html>
