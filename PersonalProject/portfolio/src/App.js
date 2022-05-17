@@ -1,43 +1,27 @@
 /* eslint-disable */
-import './App.css';
-import { styled } from 'styled-components';
+import './App.scss';
+import { useNavigate, Route, Routes, Link } from 'react-router-dom';
+import styled from 'styled-components';
+import MainPage from './MainPage';
 
 function App() {
+
   return (
-    <div className='App'>
-      <nav id='navigation'>
-        <div id='nav'>
-          <div class='navEl' onclick="scrollToElement('1p')">
-            MENU1
-          </div>
-          <div class='navEl' onclick="scrollToElement('2p')">
-            MENU2
-          </div>
-          <div class='navEl' onclick="scrollToElement('3p')">
-            MENU3
-          </div>
-          <div class='navEl' onclick="scrollToElement('4p')">
-            MENU4
-          </div>
+    <div className='Container'>
+      <MainPage/>
+      <div className='page main'>
+        <div className='welcome'>
+          <div className='left'>WELCOME!</div>
+          <div className='right'>THIS IS</div>
+          <div className='left'>MY PORTFOLIO</div>
         </div>
-      </nav>
-    <Page/>
+        <div className='oneLineIntroduction'>Front-End</div>
+      </div>
+      <div className='page introduction'>hi</div>
+      <div className='page stack'>hi</div>
+      <div className='page project'>hi</div>
+      <div className='page info'>hi</div>
     </div>
-  );
-}
-
-function Page() {
-
-  let divStyle = styled`
-  width: 70vw;
-  height: 100vh;
-  background-color: white;
-  `
-
-  return (
-    <>
-      <div></div>
-    </>
   );
 }
 

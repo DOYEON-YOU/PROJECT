@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'BlackHanSans';
+  src: url('./fonts/BlackHanSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LeferiBold';
+  src: url('./fonts/LeferiBaseBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LeferiRegular';
+  src: url('./fonts/LeferiBaseRegular.ttf') format('truetype');
+}
+
+body {
+  background-color: black;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.main {
+  color: white;
+  margin: 0 auto;
+  background-color: #101010;
+
+  // first page welcome letter
+  .welcome {
+    transition: all 0.4s;
+    -webkit-text-stroke: 4px #ffffff;
+    font-size: 15rem;
+    text-align: center;
+    color: transparent;
+    font-family: 'BlackHanSans', sans-serif;
+    font-variation-settings: 'weight' 900;
+    &:hover {
+      font-variation-settings: 'weight' 100;
+      text-shadow: 20px 20px 0px #000, 24px 24px 0px rgb(255, 255, 255);
+      color: white;
+      cursor: pointer;
+    }
+  }
+  // first page introduction letter
+  .oneLineIntroduction {
+    font-size: 70px;
+    font-family: 'LeferiBold';
+    transition: all 0.4s;
+    line-height: 90px;
+    #myName {
+      -webkit-text-stroke: 1px #ffffff;
+      color: transparent;
+    }
+    &:hover{
+      cursor: default;
+    }
+  }
+}
+
+.introduction {
+  background-color: rgb(52, 52, 52);
+}
+
+.stack {
+  background-color: rgb(81, 81, 81);
+}
+
+.project {
+  background-color: rgb(142, 142, 142);
+}
+
+.info {
+  background-color: rgb(178, 178, 178);
+}
