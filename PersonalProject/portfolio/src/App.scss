@@ -13,12 +13,12 @@
   src: url('./fonts/LeferiBaseRegular.ttf') format('truetype');
 }
 
-body {
-  background-color: black;
-  display: flex;
+.App {
   text-align: center;
   justify-content: center;
   align-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -26,17 +26,18 @@ body {
 }
 
 .page {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 .main {
   color: white;
-  margin: 0 auto;
   background-color: #101010;
 
   // first page welcome letter
@@ -45,13 +46,14 @@ body {
     -webkit-text-stroke: 4px #ffffff;
     font-size: 15rem;
     text-align: center;
-    color: transparent;
+    color: white;
     font-family: 'BlackHanSans', sans-serif;
+    text-shadow: 20px 20px 0px #000, 24px 24px 0px rgb(255, 255, 255);
     font-variation-settings: 'weight' 900;
     &:hover {
       font-variation-settings: 'weight' 100;
-      text-shadow: 20px 20px 0px #000, 24px 24px 0px rgb(255, 255, 255);
-      color: white;
+      color: transparent;
+      text-shadow: -20px -20px 0px rgb(255, 255, 255), -24px -24px 0px rgb(0, 0, 0);
       cursor: pointer;
     }
   }
@@ -61,9 +63,11 @@ body {
     font-family: 'LeferiBold';
     transition: all 0.4s;
     line-height: 90px;
+    text-shadow: 1px 1px 5px white;
     #myName {
       -webkit-text-stroke: 1px #ffffff;
       color: transparent;
+      text-shadow: none;
     }
     &:hover{
       cursor: default;
@@ -85,4 +89,40 @@ body {
 
 .info {
   background-color: rgb(178, 178, 178);
+}
+
+.arrows {
+  position: absolute;
+  bottom: 50px;
+  .arrow {
+    display: inline-block;
+    transition: all 0.2s;
+    margin: 0px 26px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50px;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 7px 0px rgb(73, 73, 73);
+    svg{
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      color: black;
+      padding: 7px;
+    }
+    &:hover{
+      background-color: white;
+      transition: all 0.2s;
+      cursor: pointer;
+      box-shadow: 0px 10px 0px rgb(73, 73, 73);
+    }
+    &:active{
+      position: relative;
+      top: 3px;
+      background-color: rgb(156, 156, 156);
+      box-shadow: 0px 1px 0px rgb(73, 73, 73);
+    }
+  }
 }

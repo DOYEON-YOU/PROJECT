@@ -1,26 +1,24 @@
 /* eslint-disable */
 import './App.scss';
-import { useNavigate, Route, Routes, Link } from 'react-router-dom';
 import styled from 'styled-components';
-import MainPage from './MainPage';
+import { ReactDOM } from 'react-dom/client';
+import { Route, Routes, Link } from 'react-router-dom';
+import Main from './Page/Main'
+import Introduction from './Page/Introduction';
+import Stack from './Page/Stack'
+import Project from './Page/Project';
+import Info from './Page/Info';
 
 function App() {
-
   return (
-    <div className='Container'>
-      <MainPage/>
-      <div className='page main'>
-        <div className='welcome'>
-          <div className='left'>WELCOME!</div>
-          <div className='right'>THIS IS</div>
-          <div className='left'>MY PORTFOLIO</div>
-        </div>
-        <div className='oneLineIntroduction'>Front-End</div>
-      </div>
-      <div className='page introduction'>hi</div>
-      <div className='page stack'>hi</div>
-      <div className='page project'>hi</div>
-      <div className='page info'>hi</div>
+    <div className='App'>
+      <Routes>
+        <Route path="/" element={<Main/>}/>
+        <Route path="/introduction" element={<Introduction/>}/>
+        <Route path="/stack" element={<Stack/>}/>
+        <Route path="/project" element={<Project/>}/>
+        <Route path="/information" element={<Info/>}/>
+      </Routes>
     </div>
   );
 }

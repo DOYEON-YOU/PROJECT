@@ -1,8 +1,10 @@
 /* eslint-disable */
 import React from 'react';
+import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
+import { FiArrowRight} from "react-icons/fi"
+import Arrow from '../Arrow';
 
-
-const MainPage = () => {
+const Main = () => {
   return (
     <>
       <div className='page main'>
@@ -14,13 +16,14 @@ const MainPage = () => {
           Front-End Junior Developer Portfolio <br />
           <span id='myName'>Kwon Doyeon</span>
         </div>
+        <div className='arrows'>
+          <a href="/introduction">
+          <div className='arrow'><FiArrowRight/></div>
+          </a>
+        </div>
       </div>
-      <div className='page introduction'>hi</div>
-      <div className='page stack'>hi</div>
-      <div className='page project'>hi</div>
-      <div className='page info'>hi</div>
     </>
   );
 };
 
-export default MainPage;
+export default Main;
