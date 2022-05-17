@@ -1,11 +1,11 @@
 body{
   margin: 0px;
   background-color: black;
-  background-image: url(./images/twinkle.png);
+  background-image: url(/Project/images/twinkle.png);
   background-size:95vw;
   background-position: center;
   background-repeat: repeat-y;
-  cursor: url(../cursors/35b1ec3c279a4dc49f1b0d5a9cc163361GRHcVlKrwgY5t8N-0.png), auto;
+  cursor: url(/Project/cursors/35b1ec3c279a4dc49f1b0d5a9cc163361GRHcVlKrwgY5t8N-0.png), auto;
 }
 
 nav img{
@@ -15,7 +15,7 @@ nav img{
 body::-webkit-scrollbar{
   width: 14px;
   background-color: #ffffff;
-  cursor: url(../cursors/35b1ec3c279a4dc49f1b0d5a9cc163361GRHcVlKrwgY5t8N-0.png), auto;
+  cursor: url(/Project/cursors/35b1ec3c279a4dc49f1b0d5a9cc163361GRHcVlKrwgY5t8N-0.png), auto;
 }
 
 body::-webkit-scrollbar-thumb{
@@ -54,8 +54,11 @@ body::-webkit-scrollbar-thumb{
 }
 
 .navEl{
-  cursor: url(../cursors/239bbbae137e4496e61e4e919087fd64lOJhcb1AzsdGjJE2-0.png), auto;
   padding: 14px;
+}
+
+.navEl:hover {
+  cursor: pointer;
 }
 
 #container{
