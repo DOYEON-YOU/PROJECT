@@ -9,6 +9,7 @@ import Stack from './Page/Stack';
 import Project from './Page/Project';
 import Info from './Page/Info';
 import Loading from './Components/Loading';
+import NotFound from './Components/NotFound';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
@@ -90,6 +91,7 @@ function App() {
               />
             }
           />
+          <Route path='/*' element={<NotFound/>}/>
         </Routes>
       </AnimatePresence>
 

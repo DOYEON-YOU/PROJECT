@@ -10,10 +10,7 @@ const Sidebar = props => {
         <div className='menu'>Stack</div>
         <div className='menu'>Project</div>
         <div className='menu'>My Information</div>
-        <div className='progress'>
-          <div className='circle'></div>
-          <div className='progressLetter'>Progress</div>
-        </div>
+        <hr />
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Arrow from '../Components/Arrow';
 import Sidebar from '../Components/Sidebar';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { Container, Col, Row } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -24,20 +25,71 @@ const Introduction = props => {
         opacity: { duration: 0.2 },
       }}>
       <div className='page introduction'>
-        <div className='sayHello'>
-          <h1 style={{ fontSize: '80px' }}>안녕하세요!</h1>
-          <h4 style={{ fontSize: '30px' }}>
-            프론트엔드 개발자를 꿈꾸는 <span className='mark'>권도연</span>
-            입니다.
-          </h4>
-          <hr />
-        </div>
-        <div data-aos='flip-left' date-aos-duration='1000'>
-          <p>
-            안asdfasfadfadfasdf녕하세요오임리ㅏㅇ렁나ㅣㅁ럼ㅇ니런ㅇ미ㅏ런미ㅏ얼ㄴㅇ미ㅏ
-            ㅓㄹ니어너러널니ㅏㅇ머리ㅏadsjflksdajflksdajfklsjadflkjsfldfㅁㄴ아ㅣ런미ㅏㅇ런미ㅏㄹ
-          </p>
-        </div>
+        <Container className='pBoxs'>
+          <Row>
+            <Col className='sayHello'>
+              <h1 style={{ fontSize: '80px' }}>안녕하세요!</h1>
+              <h4 style={{ fontSize: '30px' }}>
+                프론트엔드 개발자를 꿈꾸는 권도연입니다.
+              </h4>
+              <hr />
+            </Col>
+          </Row>
+          <Row>
+            <Col
+              className='pBox'
+              data-aos='flip-left'
+              data-aos-delay='300'
+              data-aos-duration='3000'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              rerum commodi excepturi, fugit saepe nemo laudantium eaque,
+              corporis eveniet fuga minima nesciunt ea? Cum quod quam error non
+              nulla voluptatum.
+            </Col>
+            <Col
+              className='pBox'
+              data-aos='flip-left'
+              data-aos-delay='900'
+              data-aos-duration='3000'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              rerum commodi excepturi, fugit saepe nemo laudantium eaque,
+              corporis eveniet fuga minima nesciunt ea? Cum quod quam error non
+              nulla voluptatum.
+            </Col>
+          </Row>
+          <Row>
+            <Col
+              className='pBox'
+              data-aos='flip-left'
+              data-aos-delay='1500'
+              data-aos-duration='3000'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              rerum commodi excepturi, fugit saepe nemo laudantium eaque,
+              corporis eveniet fuga minima nesciunt ea? Cum quod quam error non
+              nulla voluptatum.
+            </Col>
+            <Col
+              className='pBox'
+              data-aos='flip-left'
+              data-aos-delay='2100'
+              data-aos-duration='3000'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              rerum commodi excepturi, fugit saepe nemo laudantium eaque,
+              corporis eveniet fuga minima nesciunt ea? Cum quod quam error non
+              nulla voluptatum.
+            </Col>
+            <Col
+              className='pBox'
+              data-aos='flip-left'
+              data-aos-delay='2700'
+              data-aos-duration='3000'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+              rerum commodi excepturi, fugit saepe nemo laudantium eaque,
+              corporis eveniet fuga minima nesciunt ea? Cum quod quam error non
+              nulla voluptatum.
+            </Col>
+          </Row>
+        </Container>
         <Arrow next='stack' />
         <Sidebar />
       </div>

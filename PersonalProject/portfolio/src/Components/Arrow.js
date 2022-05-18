@@ -26,7 +26,7 @@ const Arrow = props => {
               className='arrow'
               whileHover={{ scale: 1.05, opacity: 1 }}
               whileTap={{ scale: 0.97 }}>
-              <FiArrowRight size={35}/>
+              <FiArrowRight size={50}/>
             </motion.div>
           </a>
         </div>

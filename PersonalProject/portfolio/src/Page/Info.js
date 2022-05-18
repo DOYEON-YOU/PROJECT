@@ -19,7 +19,7 @@ const Info = props => {
             className='reset'
             whileHover={{ scale: 1.05, opacity: 1 }}
             whileTap={{ scale: 0.97 }}>
-            <FiRotateCcw size={30} />
+            <FiRotateCcw size={50} />
           </motion.div>
         </a>
       </div>

@@ -33,14 +33,15 @@ const Main = props => {
           <div
             data-aos='flip-up'
             data-aos-easing='ease-in-out'
-            data-aos-duration='1000'>
+            data-aos-duration='500'
+            data-aos-delay='500'>
             MY PORTFOLIO
           </div>
         </div>
         <div
           className='oneLineIntroduction'
           data-aos='fade-up'
-          data-aos-duration='3000'>
+          data-aos-duration='3000' data-aos-delay='1000'>
           Front-End Junior Developer Portfolio <br />
           <span id='myName'>Kwon Doyeon</span>
         </div>
