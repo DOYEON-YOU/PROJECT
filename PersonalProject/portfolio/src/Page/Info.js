@@ -4,12 +4,33 @@ import { motion } from 'framer-motion';
 
 const Info = props => {
 
+    const variants = {
+    enter: direction => {
+      return {
+        x: direction > 0 ? 1000 : 1000,
+        opacity: 0,
+      };
+    },
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: direction => {
+      return {
+        zIndex: 0,
+        x: direction < 0 ? -1000 : -1000,
+        opacity: 0,
+      };
+    },
+  }
+
   return (
     <motion.div
-    variants={props.variants}
-    initial={props.enter}
-    animate={props.center}
-    exit={props.exit}
+    variants={variants}
+    initial='enter'
+    animate='center'
+    exit='exit'
     transition={{
       x: { type: "spring", stiffness: 300, damping: 30 },
       opacity: { duration: 0.2 }

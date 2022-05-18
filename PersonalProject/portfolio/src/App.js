@@ -36,17 +36,7 @@ function App() {
     <div className='App'>
       <AnimatePresence>
         <Routes>
-          <Route
-            path='/'
-            element={
-              <Main
-                variants={variants}
-                enter={variants.enter}
-                center={variants.center}
-                exit={variants.exit}
-              />
-            }
-          />
+          <Route path='/' element={<Main />} />
           <Route
             path='/introduction'
             element={

@@ -17,7 +17,8 @@ const Arrow = props => {
             <motion.div
               className='arrow'
               whileHover={{ scale: 1.05, opacity: 1 }}
-              whileTap={{ scale: 0.97 }}>
+              whileTap={{ scale: 0.97 }}
+              onClick={() => paginate(1)}>
               <FiArrowLeft />
             </motion.div>
           </a>
@@ -25,7 +26,8 @@ const Arrow = props => {
             <motion.div
               className='arrow'
               whileHover={{ scale: 1.05, opacity: 1 }}
-              whileTap={{ scale: 0.97 }}>
+              whileTap={{ scale: 0.97 }}
+              onClick={() => paginate(-1)}>
               <FiArrowRight />
             </motion.div>
           </a>
