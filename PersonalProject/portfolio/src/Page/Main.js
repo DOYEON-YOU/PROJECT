@@ -2,64 +2,49 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import Arrow from '../Components/Arrow';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-const Main = (props) => {
-
-  const variants = {
-    enter: direction => {
-      return {
-        x: direction > 0 ? 1000 : 1000,
-        opacity: 1,
-      };
-    },
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
-    exit: direction => {
-      return {
-        zIndex: 0,
-        x: direction < 0 ? -1000 : -1000,
-        opacity: 0,
-      };
-    },
-  };
+const Main = props => {
+  useEffect(() => {
+    AOS.init();
+  });
 
   return (
     <motion.div
-    variants={variants}
-    initial="enter"
-    animate="center"
-    exit="exit"
-    transition={{
-      x: { type: "spring", stiffness: 300, damping: 30 },
-      opacity: { duration: 0.2 }
-    }}>
+      variants={props.variants}
+      initial={props.enter}
+      animate={props.center}
+      exit={props.exit}
+      transition={{
+        x: { type: 'spring', stiffness: 300, damping: 30 },
+        opacity: { duration: 0.2 },
+      }}>
       <div className='page main'>
-        <motion.div
-          className='welcome'
-          animate={{
-            rotate: [0, 30, -30, 30, -30, 0],
-            scale: [0, 0.2, 0.4, 0.6, 0.8, 1],
-          }}>
-          <div className='left'>WELCOME</div>
-          <div className='right'>MY PORTFOLIO</div>
-        </motion.div>
-        <div className='oneLineIntroduction'>
+        <div className='welcome'>
+          <div
+            data-aos='flip-up'
+            data-aos-easing='ease-in-out'
+            data-aos-duration='500'>
+            WELCOME
+          </div>
+          <div
+            data-aos='flip-up'
+            data-aos-easing='ease-in-out'
+            data-aos-duration='1000'>
+            MY PORTFOLIO
+          </div>
+        </div>
+        <div
+          className='oneLineIntroduction'
+          data-aos='fade-up'
+          data-aos-duration='3000'>
           Front-End Junior Developer Portfolio <br />
           <span id='myName'>Kwon Doyeon</span>
         </div>
-        <div className='arrows'>
-          <a href='/introduction'>
-            <motion.div
-              className='arrow'
-              whileHover={{ scale: 1.05, opacity: 1 }}
-              whileTap={{ scale: 0.97 }}>
-              <FiArrowRight />
-            </motion.div>
-          </a>
-        </div>
+        <Arrow next='introduction' />
       </div>
     </motion.div>
   );

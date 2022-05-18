@@ -14,31 +14,29 @@
 }
 
 .App {
+  margin: 0;
   text-align: center;
   justify-content: center;
   align-content: center;
   width: 100vw;
-  height: 100vh;
-  .transition-group {
-    position: relative;
-  }
-  
+  background-color: #272727;
+
   .pageSlider-enter {
     opacity: 0;
     transform: scale(1.1);
   }
-  
+
   .pageSlider-enter-active {
     opacity: 1;
     transform: scale(1);
     transition: opacity 300ms, transform 300ms;
   }
-  
+
   .pageSlider-exit {
     opacity: 1;
     transform: scale(1);
   }
-  
+
   .pageSlider-exit-active {
     opacity: 0;
     transform: scale(0.9);
@@ -50,14 +48,15 @@
   display: none;
 }
 
+// Pages
+
 .page {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-flow: column;
-  position: absolute;
   width: 100vw;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .main {
@@ -78,7 +77,8 @@
     &:hover {
       font-variation-settings: 'weight' 100;
       color: transparent;
-      text-shadow: -20px -20px 0px rgb(255, 255, 255), -24px -24px 0px rgb(0, 0, 0);
+      text-shadow: -20px -20px 0px rgb(255, 255, 255),
+        -24px -24px 0px rgb(0, 0, 0);
       cursor: pointer;
     }
   }
@@ -94,15 +94,39 @@
       color: transparent;
       text-shadow: none;
     }
-    &:hover{
+    &:hover {
       cursor: default;
     }
   }
 }
 
 .introduction {
-  height: 200vh;
-  background-color: rgb(52, 52, 52);
+  height: 100vh;
+  color: white;
+  width: 80vw;
+  .sayHello {
+    width: 80vw;
+    font-family: 'LeferiBaseBold';
+    text-align: left;
+    margin: 50px;
+    h1 {
+      margin: 0;
+    }
+    h4 {
+      margin: 0;
+    }
+  }
+  p {
+    letter-spacing: 0.5px;
+    display: inline-block;
+    width: 400px;
+    font-family: 'LeferiRegular';
+    font-size: 22px;
+  }
+  img {
+    width: 500px;
+    display: inline-block;
+  }
 }
 
 .stack {
@@ -111,7 +135,7 @@
 }
 
 .project {
-  height: 300vh;
+  height: 100vh;
   background-color: rgb(142, 142, 142);
 }
 
@@ -121,37 +145,127 @@
 }
 
 .arrows {
-  position: absolute;
-  bottom: 50px;
+  right: 50px;
   position: fixed;
   .arrow {
     display: inline-block;
     transition: all 0.2s;
-    margin: 0px 26px;
     width: 50px;
     height: 50px;
-    background-color: transparent;
     border-radius: 50px;
     line-height: 30px;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 7px 0px rgb(73, 73, 73);
-    svg{
-      width: 35px;
-      height: 35px;
+    svg {
       line-height: 35px;
       color: black;
       padding: 7px;
     }
-    &:hover{
+    &:hover {
       background-color: white;
       transition: all 0.2s;
       cursor: pointer;
       box-shadow: 0px 10px 0px rgb(73, 73, 73);
     }
-    &:active{
+    &:active {
       position: relative;
       background-color: rgb(156, 156, 156);
       box-shadow: 0px 1px 0px rgb(73, 73, 73);
+    }
+  }
+}
+
+.resetWrap {
+  position: absolute;
+  right: 50px;
+  position: fixed;
+  .reset {
+    display: inline-block;
+    transition: all 0.2s;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 7px 0px rgb(73, 73, 73);
+    svg {
+      line-height: 50px;
+      color: black;
+      padding: 10px;
+    }
+    &:hover {
+      background-color: white;
+      transition: all 0.2s;
+      cursor: pointer;
+      box-shadow: 0px 10px 0px rgb(73, 73, 73);
+    }
+    &:active {
+      position: relative;
+      background-color: rgb(156, 156, 156);
+      box-shadow: 0px 1px 0px rgb(73, 73, 73);
+    }
+  }
+}
+
+.sidebarBox {
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  position: fixed;
+  top: 100px;
+  right: -195px;
+  width: 200px;
+  height: 500px;
+  padding: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  transition: all 0.5s;
+  color: black;
+  font-family: 'LeferiRegular';
+  font-size: 23px;
+  &:hover {
+    transition: all 1s;
+    transform: translateX(-195px);
+    box-shadow: 0px 10px 0px rgb(83, 83, 83);
+    background-color: rgba($color: #ffffff, $alpha: 1.0);
+  }
+  .menu {
+    padding: 5px;
+    transition: all 0.5s;
+    &:hover {
+      transition: all 0.5s;
+      font-weight: bolder;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+    &:first-child {
+      margin-top: 50px;
+    }
+  }
+  .progress {
+    position: static;
+    .circle {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+      margin-top: 20px;
+      border-radius: 140px;
+      border: 5px solid black;
+    }
+  }
+}
+
+.loading {
+  background-color: #101010;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: 'LeferiBold';
+  font-size: 30px;
+  align-items: center;
+  display: flex;
+  .loadBox {
+    margin: 0 auto;
+    .loadLetter {
+      margin-left: 100px;
     }
   }
 }

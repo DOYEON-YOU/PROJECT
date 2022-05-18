@@ -1,7 +1,6 @@
 /* eslint-disable */
 import './App.scss';
 import { styled } from 'styled-components';
-import { ReactDOM } from 'react-dom/client';
 import { Route, Routes, Link } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Main from './Page/Main';
@@ -9,12 +8,15 @@ import Introduction from './Page/Introduction';
 import Stack from './Page/Stack';
 import Project from './Page/Project';
 import Info from './Page/Info';
+import Loading from './Components/Loading';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
   const variants = {
     enter: direction => {
       return {
-        x: direction > 0 ? 1000 : -1000,
+        x: direction > 0 ? 1000 : 1000,
         opacity: 0,
       };
     },
@@ -26,11 +28,18 @@ function App() {
     exit: direction => {
       return {
         zIndex: 0,
-        x: direction < 0 ? 1000 : -1000,
+        x: direction < 0 ? -1000 : -1000,
         opacity: 0,
       };
     },
   };
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  });
+  
 
   return (
     <div className='App'>
@@ -71,7 +80,7 @@ function App() {
             }
           />
           <Route
-            path='/information'
+            path='/info'
             element={
               <Info
                 variants={variants}
@@ -83,6 +92,9 @@ function App() {
           />
         </Routes>
       </AnimatePresence>
+
+      {loading ? (<Loading />) : console.log('error!')}
+
     </div>
   );
 }

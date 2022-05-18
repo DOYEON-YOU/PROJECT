@@ -1,5 +1,5 @@
 import React from 'react';
-import Arrow from '../Arrow';
+import Arrow from '../Components/Arrow';
 import { motion } from 'framer-motion';
 
 const Stack = props => {
@@ -15,7 +15,7 @@ const Stack = props => {
       opacity: { duration: 0.2 }
     }}>
       <div className='page stack'>
-        <Arrow prev='introduction' next='project' />
+        <Arrow next='project' />
       </div>
     </motion.div>
   );
