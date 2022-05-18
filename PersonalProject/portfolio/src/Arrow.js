@@ -2,24 +2,36 @@
 
 import React, { useState } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const Arrow = props => {
-  return (
-    <>
-      <div className='arrows'>
-        <a href={`/${props.prev}`}>
-          <div className='arrow' onClick={{}}>
-            <FiArrowLeft />
-          </div>
-        </a>
-        <a href={`/${props.next}`}>
-          <div className='arrow'>
-            <FiArrowRight />
-          </div>
-        </a>
-      </div>
-    </>
-  );
-};
+  const swipeConfidenceThreshold = 10000;
+  const swipePower = (offset, velocity) => {
+    return Math.abs(offset) * velocity;
+  };
+
+    return (
+      <>
+        <div className='arrows'>
+          <a href={`/${props.prev}`}>
+            <motion.div
+              className='arrow'
+              whileHover={{ scale: 1.05, opacity: 1 }}
+              whileTap={{ scale: 0.97 }}>
+              <FiArrowLeft />
+            </motion.div>
+          </a>
+          <a href={`/${props.next}`}>
+            <motion.div
+              className='arrow'
+              whileHover={{ scale: 1.05, opacity: 1 }}
+              whileTap={{ scale: 0.97 }}>
+              <FiArrowRight />
+            </motion.div>
+          </a>
+        </div>
+      </>
+    );
+  };
 
 export default Arrow;

@@ -19,6 +19,31 @@
   align-content: center;
   width: 100vw;
   height: 100vh;
+  .transition-group {
+    position: relative;
+  }
+  
+  .pageSlider-enter {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  
+  .pageSlider-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .pageSlider-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .pageSlider-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -32,13 +57,13 @@
   flex-flow: column;
   position: absolute;
   width: 100vw;
-  height: 100vh;
   margin: 0 auto;
 }
 
 .main {
   color: white;
   background-color: #101010;
+  height: 100vh;
 
   // first page welcome letter
   .welcome {
@@ -76,24 +101,29 @@
 }
 
 .introduction {
+  height: 200vh;
   background-color: rgb(52, 52, 52);
 }
 
 .stack {
+  height: 100vh;
   background-color: rgb(81, 81, 81);
 }
 
 .project {
+  height: 300vh;
   background-color: rgb(142, 142, 142);
 }
 
 .info {
+  height: 100vh;
   background-color: rgb(178, 178, 178);
 }
 
 .arrows {
   position: absolute;
   bottom: 50px;
+  position: fixed;
   .arrow {
     display: inline-block;
     transition: all 0.2s;
@@ -120,7 +150,6 @@
     }
     &:active{
       position: relative;
-      top: 3px;
       background-color: rgb(156, 156, 156);
       box-shadow: 0px 1px 0px rgb(73, 73, 73);
     }
