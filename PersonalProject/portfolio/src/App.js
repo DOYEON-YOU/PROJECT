@@ -105,7 +105,7 @@ function App() {
         </Routes>
       </AnimatePresence>
 
-      {loading ? <Loading /> : console.log('error!')}
+      {loading ? <Loading /> : ''}
     </div>
   );
 }
