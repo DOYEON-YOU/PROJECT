@@ -5,7 +5,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Main from './Page/Main';
 import Introduction from './Page/Introduction';
-import Stack from './Page/Stack';
+import Stack from './Page/Stack'; 
 import Project from './Page/Project';
 import Info from './Page/Info';
 import Loading from './Components/Loading';
