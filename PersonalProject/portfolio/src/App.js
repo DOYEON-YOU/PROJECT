@@ -1,17 +1,21 @@
 /* eslint-disable */
 import './App.scss';
-import { styled } from 'styled-components';
+import { useEffect, useState } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Main from './Page/Main';
 import Introduction from './Page/Introduction';
-import Stack from './Page/Stack'; 
+import Stack from './Page/Stack';
+import HTML from './Page/skillSet/HTML';
+import CSS from './Page/skillSet/CSS';
+import Javascript from './Page/skillSet/Javascript';
+import Typescript from './Page/skillSet/Typescript';
+import JsReact from './Page/skillSet/JsReact';
+import SASS from './Page/skillSet/SASS';
 import Project from './Page/Project';
 import Info from './Page/Info';
 import Loading from './Components/Loading';
 import NotFound from './Components/NotFound';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 function App() {
   const variants = {
@@ -40,7 +44,6 @@ function App() {
   useEffect(() => {
     setLoading(false);
   });
-  
 
   return (
     <div className='App'>
@@ -69,6 +72,12 @@ function App() {
               />
             }
           />
+          <Route path='/stack/html' element={<HTML />} />
+          <Route path='/stack/css' element={<CSS />} />
+          <Route path='/stack/javascript' element={<Javascript />} />
+          <Route path='/stack/typescript' element={<Typescript />} />
+          <Route path='/stack/react' element={<JsReact />} />
+          <Route path='/stack/sass' element={<SASS />} />
           <Route
             path='/project'
             element={
@@ -91,13 +100,12 @@ function App() {
               />
             }
           />
-          <Route path='/*' element={<NotFound/>}/>
-          <Route path='/loading' element={<Loading/>}/>
+          <Route path='/*' element={<NotFound />} />
+          <Route path='/loading' element={<Loading />} />
         </Routes>
       </AnimatePresence>
 
-      {loading ? (<Loading />) : console.log('error!')}
-
+      {loading ? <Loading /> : console.log('error!')}
     </div>
   );
 }

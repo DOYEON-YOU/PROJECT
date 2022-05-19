@@ -19,7 +19,7 @@
   justify-content: center;
   align-content: center;
   width: 100vw;
-  background-color: #272727;
+  background-color: #101010;
 
   .pageSlider-enter {
     opacity: 0;
@@ -69,7 +69,7 @@
     line-height: 260px;
     transition: all 0.4s;
     -webkit-text-stroke: 4px #ffffff;
-    font-size: 15rem;
+    font-size: 13rem;
     text-align: center;
     color: white;
     font-family: 'BlackHanSans', sans-serif;
@@ -85,10 +85,10 @@
   }
   // first page introduction letter
   .oneLineIntroduction {
-    font-size: 70px;
+    font-size: 50px;
     font-family: 'LeferiBold';
     transition: all 0.4s;
-    line-height: 90px;
+    line-height: 60px;
     text-shadow: 1px 1px 5px white;
     #myName {
       -webkit-text-stroke: 1px #ffffff;
@@ -103,7 +103,7 @@
     position: absolute;
     writing-mode: vertical-rl;
     font-family: 'LeferiBold';
-    font-size: 50px;
+    font-size: 35px;
     top: 150px;
     right: 20px;
     z-index: 1;
@@ -138,12 +138,12 @@
     box-shadow: 3px 3px 0px rgb(190, 190, 190), 20px 20px 0px rgb(255, 255, 255),
       23px 23px 0px rgb(0, 0, 0);
     margin: 20px;
-    height: 500px;
+    height: 400px;
     border-radius: 10px;
     color: white;
     font-family: 'LeferiRegular';
     align-items: center;
-    font-size: 22px;
+    font-size: 19px;
     &:hover {
       cursor: pointer;
       background-color: white;
@@ -167,7 +167,7 @@
   .title {
     z-index: 3;
     color: white;
-    font-size: 100px;
+    font-size: 70px;
     font-family: 'LeferiBold';
     margin-bottom: 30px;
     text-shadow: 7px 7px 0px black;
@@ -178,8 +178,8 @@
     align-items: center;
     justify-content: center;
     color: black;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin: 20px;
     border: 2px solid white;
     border-radius: 5px;
@@ -190,12 +190,12 @@
       cursor: pointer;
       background-color: white;
       svg {
-        width: 250px;
+        width: 180px;
         transition: all 0.4s;
       }
     }
     svg {
-      width: 200px;
+      width: 140px;
       transition: all 0.4s;
     }
   }
@@ -204,24 +204,30 @@
     transition: all 0.0001s;
   }
   .two:hover {
-    background-color: #1572B6;
+    background-color: #1572b6;
     transition: all 0.0001s;
   }
   .three:hover {
-    background-color: #CC6699;
+    background-color: #cc6699;
     transition: all 0.0001s;
   }
   .four:hover {
-    background-color: #F7DF1E;
+    background-color: #f7df1e;
     transition: all 0.0001s;
   }
   .five:hover {
-    background-color: #3178C6;
+    background-color: #3178c6;
     transition: all 0.0001s;
   }
   .six:hover {
-    background-color: #61DAFB;
+    background-color: #61dafb;
     transition: all 0.0001s;
+  }
+  .clickBoxes {
+    font-size: 40px;
+    font-family: 'LeferiBold';
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
   }
 }
 
@@ -235,8 +241,90 @@
   background-color: rgb(178, 178, 178);
 }
 
+.skill {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  width: 100vw;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: #101010;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  .title {
+    font-family: 'LeferiBold';
+    font-size: 70px;
+  }
+  hr {
+    width: 50vw;
+    border: 2px solid white;
+    opacity: 1;
+  }
+  .html {
+
+  }
+  .skills {
+    margin: 30px 0px;
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 30px;
+    text-align: center;
+    padding: 0;
+    &:before {
+      position: absolute;
+      top: -30px;
+      left: -5px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+    li {
+      width: 7.5%;
+      height: 13px;
+      border: 1px solid white;
+      background: transparent;
+      box-shadow: 0 0 7px 0 fade-out(white, 0.6);
+      display: inline-block;
+      transform: skew(-45deg);
+    }
+    .full {
+      background: white;
+    }
+  }
+  .exitIcon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    font-size: 35px;
+    line-height: 35px;
+    opacity: 0.7;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+      transition: all 0.3s;
+      box-shadow: 0px 5px 0px gray;
+    }
+    &:active {
+      transform: translateY(5px);
+      box-shadow: none;
+      background-color: rgb(179, 179, 179);
+    }
+  }
+}
+
 .arrows {
   right: 50px;
+  top: 50vh;
   position: fixed;
   .arrow {
     display: inline-block;
@@ -246,7 +334,6 @@
     border-radius: 50px;
     line-height: 30px;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 7px 0px rgb(73, 73, 73);
     svg {
       line-height: 35px;
       color: black;
@@ -256,12 +343,12 @@
       background-color: white;
       transition: all 0.2s;
       cursor: pointer;
-      box-shadow: 0px 10px 0px rgb(73, 73, 73);
+      box-shadow: 0px 5px 0px rgb(73, 73, 73);
     }
     &:active {
-      position: relative;
+      transform: translateY(10px);
       background-color: rgb(156, 156, 156);
-      box-shadow: 0px 1px 0px rgb(73, 73, 73);
+      box-shadow: none;
     }
   }
 }
@@ -269,6 +356,7 @@
 .resetWrap {
   position: absolute;
   right: 50px;
+  top: 50vh;
   position: fixed;
   .reset {
     display: inline-block;
@@ -277,7 +365,6 @@
     height: 50px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 7px 0px rgb(73, 73, 73);
     svg {
       line-height: 50px;
       color: black;
@@ -287,12 +374,12 @@
       background-color: white;
       transition: all 0.2s;
       cursor: pointer;
-      box-shadow: 0px 10px 0px rgb(73, 73, 73);
+      box-shadow: 0px 5px 0px rgb(73, 73, 73);
     }
     &:active {
-      position: relative;
       background-color: rgb(156, 156, 156);
-      box-shadow: 0px 1px 0px rgb(73, 73, 73);
+      width: 49px;
+      height: 49px;
     }
   }
 }
@@ -304,7 +391,7 @@
   top: 100px;
   right: -190px;
   width: 200px;
-  height: 500px;
+  height: 400px;
   padding: 10px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -339,7 +426,7 @@
       }
     }
     &:first-child {
-      margin-top: 70px;
+      margin-top: 20px;
     }
   }
 
@@ -426,37 +513,12 @@
     }
   }
 }
-.wave {
-  z-index: 1;
-  opacity: .4;
-  position: absolute;
-  background: rgb(134, 134, 134);
-  width: 1300px;
-  height: 1400px;
-  top: 350px;
-  transform-origin: 50% 48%;
-  border-radius: 43%;
-  animation: drift 3000ms infinite linear;
-}
-.waves {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-}
-
-.wave.-three {
-  animation: drift 5000ms infinite linear;
-  background: rgb(75, 75, 75);
-}
-
-.wave.-two {
-  animation: drift 7000ms infinite linear;
-  opacity: .1;
-  background: rgb(216, 216, 216);
-}
 
 @keyframes drift {
-  from { transform: rotate(0deg); }
-  from { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
 }
