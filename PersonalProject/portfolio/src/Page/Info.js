@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiRotateCcw } from 'react-icons/fi';
+import Sidebar from '../Components/Sidebar';
 
 const Info = props => {
   return (
@@ -22,6 +23,7 @@ const Info = props => {
             <FiRotateCcw size={50} />
           </motion.div>
         </a>
+        <Sidebar />
       </div>
     </motion.div>
   );

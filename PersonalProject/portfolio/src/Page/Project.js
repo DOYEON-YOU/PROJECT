@@ -1,6 +1,7 @@
 import React from 'react';
 import Arrow from '../Components/Arrow';
 import { motion } from 'framer-motion';
+import Sidebar from '../Components/Sidebar';
 
 const Project = props => {
   return (
@@ -15,6 +16,7 @@ const Project = props => {
       }}>
       <div className='page project'>
         <Arrow next='info' />
+        <Sidebar />
       </div>
     </motion.div>
   );

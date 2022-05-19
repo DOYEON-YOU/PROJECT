@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Arrow from '../Components/Arrow';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Sidebar from '../Components/Sidebar';
 import { useEffect } from 'react';
 
 const Main = props => {
@@ -46,6 +47,8 @@ const Main = props => {
           <span id='myName'>Kwon Doyeon</span>
         </div>
         <Arrow next='introduction' />
+        <Sidebar />
+        <div className='hoverMe' data-aos='zoom-in'>Hover Me!</div>
       </div>
     </motion.div>
   );

@@ -92,6 +92,7 @@ function App() {
             }
           />
           <Route path='/*' element={<NotFound/>}/>
+          <Route path='/loading' element={<Loading/>}/>
         </Routes>
       </AnimatePresence>
 

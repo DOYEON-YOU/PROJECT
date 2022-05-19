@@ -99,12 +99,27 @@
       cursor: default;
     }
   }
+  .hoverMe {
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-family: 'LeferiBold';
+    font-size: 50px;
+    top: 150px;
+    right: 20px;
+    z-index: 1;
+    -webkit-text-stroke: 1px #ffffff;
+    color: transparent;
+    &:hover {
+      cursor: default;
+    }
+  }
 }
 
 .introduction {
-  width: 80vw;
+  width: 100vw;
   height: 100vh;
   color: white;
+  background-color: #101010;
   .sayHello {
     width: 60vw;
     font-family: 'LeferiBaseBold';
@@ -117,30 +132,23 @@
       margin: 0;
     }
   }
-  .pBoxs {
-    .pBox {
-      border: 5px solid rgb(255, 255, 255);
-      box-shadow: 3px 3px 0px rgb(190, 190, 190),
-        20px 20px 0px rgb(255, 255, 255), 23px 23px 0px rgb(0, 0, 0);
-      margin: 20px;
-      position: relative;
-      width: 500px;
-      height: 500px;
-      border-radius: 10px;
-      color: white;
-      display: inline-block;
-      height: 400px;
-      width: 400px;
-      font-family: 'LeferiRegular';
-      font-size: 22px;
-      transition: all 0.5s;
-      &:hover {
-        cursor: pointer;
-        background-color: white;
-        color: black;
-        box-shadow: none;
-        transition: all 0.5s;
-      }
+  .pBox {
+    display: flex;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 3px 3px 0px rgb(190, 190, 190), 20px 20px 0px rgb(255, 255, 255),
+      23px 23px 0px rgb(0, 0, 0);
+    margin: 20px;
+    height: 500px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'LeferiRegular';
+    align-items: center;
+    font-size: 22px;
+    &:hover {
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      font-weight: bolder;
     }
   }
   img {
@@ -151,7 +159,70 @@
 
 .stack {
   height: 100vh;
-  background-color: rgb(81, 81, 81);
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #101010;
+  display: flex;
+  .title {
+    z-index: 3;
+    color: white;
+    font-size: 100px;
+    font-family: 'LeferiBold';
+    margin-bottom: 30px;
+    text-shadow: 7px 7px 0px black;
+  }
+  .stackBox {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: white;
+    transition: width, background-color 0.4s;
+    overflow: hidden;
+    &:hover {
+      cursor: pointer;
+      background-color: white;
+      svg {
+        width: 250px;
+        transition: all 0.4s;
+      }
+    }
+    svg {
+      width: 200px;
+      transition: all 0.4s;
+    }
+  }
+  .one:hover {
+    background-color: #e34f26;
+    transition: all 0.0001s;
+  }
+  .two:hover {
+    background-color: #1572B6;
+    transition: all 0.0001s;
+  }
+  .three:hover {
+    background-color: #CC6699;
+    transition: all 0.0001s;
+  }
+  .four:hover {
+    background-color: #F7DF1E;
+    transition: all 0.0001s;
+  }
+  .five:hover {
+    background-color: #3178C6;
+    transition: all 0.0001s;
+  }
+  .six:hover {
+    background-color: #61DAFB;
+    transition: all 0.0001s;
+  }
 }
 
 .project {
@@ -227,6 +298,7 @@
 }
 
 .sidebarBox {
+  z-index: 2;
   background-color: rgba($color: #ffffff, $alpha: 0.5);
   position: fixed;
   top: 100px;
@@ -244,22 +316,35 @@
   &:hover {
     transition: all 1s;
     transform: translateX(-195px);
-    box-shadow: 0px 10px 0px rgb(83, 83, 83);
+    box-shadow: 0px 10px 7px rgb(83, 83, 83);
     background-color: rgba($color: #ffffff, $alpha: 1);
   }
   .menu {
-    padding: 5px;
+    color: black;
+    text-decoration: none;
+    padding: 18px 0px;
     transition: all 0.5s;
+    a {
+      text-decoration: none;
+      color: black;
+    }
     &:hover {
       transition: all 0.5s;
       font-weight: bolder;
+      cursor: pointer;
       background-color: black;
       color: white;
-      cursor: pointer;
+      a {
+        color: white;
+      }
     }
     &:first-child {
-      margin-top: 50px;
+      margin-top: 70px;
     }
+  }
+
+  hr {
+    margin: 0;
   }
 
   .circle {
@@ -312,7 +397,6 @@
     margin-top: 50px;
   }
   .koError {
-    
     font-size: 50px;
     font-family: 'LeferiRegular';
     text-shadow: 2px 2px 0px gray;
@@ -329,11 +413,11 @@
     border-radius: 3px;
     box-shadow: 5px 5px 0px white;
     transition: all 0.3s;
-    &:hover{
-      background-color: #101010;
+    &:hover {
+      background-color: transparent;
       transition: all 0.3s;
     }
-    &:active{
+    &:active {
       background-color: black;
       position: relative;
       top: 5px;
@@ -341,4 +425,38 @@
       box-shadow: none;
     }
   }
+}
+.wave {
+  z-index: 1;
+  opacity: .4;
+  position: absolute;
+  background: rgb(134, 134, 134);
+  width: 1300px;
+  height: 1400px;
+  top: 350px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+.waves {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+  background: rgb(75, 75, 75);
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: rgb(216, 216, 216);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
 }
