@@ -19,7 +19,7 @@ const Stack = props => {
       exit={props.exit}
       transition={{
         x: { type: 'spring', stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
+        opacity: { duration: 0.2 }, 
       }}>
       <div className='page stack'>
         <div
