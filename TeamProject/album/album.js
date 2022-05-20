@@ -87,14 +87,15 @@ function zoom(img) {
     div.classList.remove('popUp')
     div.style.width = '290px'
     div.style.height = '290px'
-    div.style.margin = '13px'
     div.style.cursor = 'default'
     div.style.boxShadow = 'none'
     div.style.transition = '0.3s'
+    div.style.margin = '13px'
 
     img.style.width = '290px'
     img.style.height = '290px'
     img.style.marginTop = '0'
+    img.style.objectFit = 'cover'
 
     this.parentElement.removeChild(this)
   })

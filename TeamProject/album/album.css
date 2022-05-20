@@ -118,10 +118,6 @@ header {
   margin: 13px;
   z-index: -1;
   transition: .1s;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
 }
 
 #images div img {

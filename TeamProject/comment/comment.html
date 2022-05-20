@@ -9,21 +9,267 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
-    <link rel="stylesheet" href="./comment.css">
   </head>
+  <style>
+    @font-face {
+      font-family: 'SUIT-Medium';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2')
+        format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @keyframes rainbowLink {
+      0% {
+        background-color: #ffa7a7;
+      }
+      8.4% {
+        background-color: #ffc19e;
+      }
+      16.8% {
+        background-color: #ffe08c;
+      }
+      25.2% {
+        background-color: #faed7d;
+      }
+      33% {
+        background-color: #cef279;
+      }
+      41.4% {
+        background-color: #b7f0b1;
+      }
+      59.8% {
+        background-color: #b2ebf4;
+      }
+      68.2% {
+        background-color: #b2ccff;
+      }
+      76.6% {
+        background-color: #b5b2ff;
+      }
+      85% {
+        background-color: #d1b2ff;
+      }
+      93.4% {
+        background-color: #ffb2f5;
+      }
+      100% {
+        background-color: #ffb2d9;
+      }
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      font-family: 'SUIT-Medium';
+    }
+
+    section {
+      margin: 0 auto;
+      box-shadow: 3px 3px 6px gray;
+      display: inline-block;
+      padding: 25px;
+      width: 600px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #img img {
+      width: 600px;
+      margin-bottom: 25px;
+      box-shadow: 1px 1px 3px gray;
+    }
+
+    #commentBox {
+      outline: 2px solid black;
+      width: 600px;
+      height: 400px;
+      position: relative;
+    }
+
+    .comments {
+      width: 600px;
+      height: 340px;
+    }
+
+    .comments div span {
+      font-weight: bolder;
+      color: rgb(36, 36, 36);
+      padding: 3px 10px;
+      box-shadow: 1px 1px 3px gray;
+    }
+
+    .comment {
+      margin: 3px 0px;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.4s;
+      padding: 7px;
+    }
+
+    .comment:hover {
+      transition: all 0.4s;
+      cursor: pointer;
+      background-color: rgb(187, 187, 187);
+    }
+
+    .comment input {
+      margin-top: 10px;
+      width: 200px;
+      height: 21px;
+      border: 1px solid black;
+      margin-right: 5px;
+    }
+
+    .comments div input:focus {
+      background: black;
+      color: white;
+      transition: all 0.3s;
+    }
+
+    .comments div button {
+      border-radius: 3px;
+      background-color: black;
+      color: white;
+    }
+
+    .comments div button:hover {
+      cursor: pointer;
+    }
+
+    .addReComment {
+      font-weight: lighter;
+      text-decoration: underline;
+      color: rgb(35, 35, 35);
+      line-height: 30px;
+    }
+
+    #line {
+      width: 600px;
+      height: 1px;
+      background: black;
+    }
+
+    #inputBox {
+      display: grid;
+      width: 600px;
+      height: 60px;
+    }
+
+    .userInfo {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+    }
+
+    #nick {
+      font-family: 'SUIT-Medium';
+      font-weight: bold;
+      border: 1px solid black;
+      width: 198px;
+      height: 26px;
+    }
+
+    #nick:focus {
+      outline: 0;
+      background-color: black;
+      transition: all 0.5s;
+      color: white;
+    }
+
+    #color {
+      animation-name: rainbowLink;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      font-weight: bold;
+      font-family: 'SUIT-Medium';
+      border: 1px solid black;
+      width: 198px;
+      height: 26px;
+    }
+
+    #color:focus {
+      outline: 0;
+      transition: all 0.5s;
+    }
+
+    #commentInput {
+      font-family: 'SUIT-Medium';
+      border: 1px solid black;
+      font-weight: bold;
+      display: inline-block;
+      height: 55px;
+      width: 391px;
+      margin-left: 204px;
+    }
+
+    #commentInput:focus {
+      background-color: black;
+      border: 1px solid white;
+      transition: all 0.5s;
+      color: white;
+    }
+
+    #submit {
+      font-family: 'SUIT-Medium';
+      height: 60px;
+      width: 60px;
+      border: 0;
+      position: absolute;
+      right: 0;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      transition: all 0.5s;
+    }
+
+    #submit:hover {
+      transition: all 0.5s;
+      cursor: pointer;
+      background-color: rgb(21, 21, 21);
+    }
+
+    #colorPicker {
+      display: none;
+      position: static;
+      margin-right: 262.6px;
+      animation-name: rainbowLink;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      border: 3px solid black;
+    }
+
+    #colorPicker button {
+      font-family: 'SUIT-Medium';
+      width: 100px;
+      font-weight: bolder;
+      height: 40px;
+      border: 3px solid black;
+      margin: 4px;
+      cursor: pointer;
+    }
+
+    #colorPicker button:hover {
+      cursor: pointer;
+    }
+  </style>
   <body>
     <section>
       <div id="img">
-        <img src="/HTML-CSS-JavaScript/Mini-Project/images/Album/Sample/도시.jpg" />
+        <img
+          src="https://img.etnews.com/news/article/2021/07/23/cms_temp_article_23153814137700.jpg"
+        />
       </div>
       <div id="commentBox">
-        <div class="comments"><br>
-        </div>
+        <div class="comments"><br /></div>
         <div id="line"></div>
         <div id="inputBox">
           <div class="userInfo">
             <input type="text" id="nick" placeholder="@NICKNAME" /><br />
-            <input type="text" id="color" placeholder="COLOR"/>
+            <input type="text" id="color" placeholder="COLOR" />
           </div>
           <textarea
             name="comment"
@@ -36,21 +282,150 @@
           <button id="submit" onclick="post()">게시</button>
         </div>
       </div>
-    <div id="colorPicker">
-      <button onclick='colorPick(this)'style="background-color:#FFA7A7">#FFA7A7</button>
-      <button onclick='colorPick(this)'style="background-color:#FFC19E">#FFC19E</button>
-      <button onclick='colorPick(this)'style="background-color:#FFE08C">#FFE08C</button><br>
-      <button onclick='colorPick(this)'style="background-color:#FAED7D">#FAED7D</button>
-      <button onclick='colorPick(this)'style="background-color:#CEF279">#CEF279</button>
-      <button onclick='colorPick(this)'style="background-color:#B7F0B1">#B7F0B1</button><br>
-      <button onclick='colorPick(this)'style="background-color:#B2EBF4">#B2EBF4</button>
-      <button onclick='colorPick(this)'style="background-color:#B2CCFF">#B2CCFF</button>
-      <button onclick='colorPick(this)'style="background-color:#B5B2FF">#B5B2FF</button><br>
-      <button onclick='colorPick(this)'style="background-color:#D1B2FF">#D1B2FF</button>
-      <button onclick='colorPick(this)'style="background-color:#FFB2F5">#FFB2F5</button>
-      <button onclick='colorPick(this)'style="background-color:#FFB2D9">#FFB2D9</button>
-    </div>
+      <div id="colorPicker">
+        <button onclick="colorPick(this)" style="background-color: #ffa7a7">
+          #FFA7A7
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #ffc19e">
+          #FFC19E
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #ffe08c">
+          #FFE08C</button
+        ><br />
+        <button onclick="colorPick(this)" style="background-color: #faed7d">
+          #FAED7D
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #cef279">
+          #CEF279
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #b7f0b1">
+          #B7F0B1</button
+        ><br />
+        <button onclick="colorPick(this)" style="background-color: #b2ebf4">
+          #B2EBF4
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #b2ccff">
+          #B2CCFF
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #b5b2ff">
+          #B5B2FF</button
+        ><br />
+        <button onclick="colorPick(this)" style="background-color: #d1b2ff">
+          #D1B2FF
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #ffb2f5">
+          #FFB2F5
+        </button>
+        <button onclick="colorPick(this)" style="background-color: #ffb2d9">
+          #FFB2D9
+        </button>
+      </div>
     </section>
-    <script src="./comment.js"></script>
+    <script>
+      const nick = document.querySelector('#nick');
+      const color = document.querySelector('#color');
+      const commentInput = document.querySelector('#commentInput');
+      const commentBox = document.querySelector('.comments');
+
+      /**
+       * - 컬러에 focus 되었을 때 색상 코드표 출력하고, 컬러 input에서 색상 담아오기
+       */
+
+      color.addEventListener('focusin', function () {
+        const colorPicker = document.querySelector('#colorPicker');
+        colorPicker.style.display = 'inline-block';
+      });
+
+      function colorPick(btn) {
+        color.value = btn.innerText;
+        document.querySelector('#colorPicker').style.display = 'none';
+      }
+
+      /**
+       * @ 댓글 내용과 닉네임 불러와서 div에 담아준 뒤 commentBox에 넣어준다.
+       */
+      function addComment() {
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        newComment.setAttribute('onclick', 'reComment(this)');
+        newComment.innerHTML = `
+  <span style="background-color:${color.value};">@${nick.value}</span>
+  ${commentInput.value}
+  <div class="recomment"></div>
+`;
+
+        commentBox.appendChild(newComment);
+        commentInput.value = '';
+        nick.value = '';
+        color.value = '';
+      }
+
+      /**
+       * & 대댓글 쓸 수 있는 input 만들기
+       */
+      function reComment(div) {
+        const br = document.createElement('br');
+        const input = document.createElement('input');
+        const btn = document.createElement('button');
+        btn.setAttribute('onclick', 'closeReComment(this)');
+        btn.innerText = '게시';
+
+        div.appendChild(br);
+        div.appendChild(input);
+        div.appendChild(btn);
+
+        div.querySelector('input').addEventListener('click', function () {
+          event.stopPropagation();
+        });
+      }
+
+      /**
+       * # 게시 버튼을 누르면 input과 버튼이 사라지게 하기
+       */
+
+      function closeReComment(btn) {
+        const div = btn.parentNode;
+
+        const br = div.querySelector('br');
+        const input = div.querySelector('input');
+        const button = div.querySelector('button');
+
+        const commentDetail = input.value;
+
+        div.removeChild(br);
+        div.removeChild(input);
+        div.removeChild(button);
+
+        /**
+         * # 댓글 추가되게끔 하기
+         */
+
+        const recommentChild = div.querySelector('.recomment');
+        const addReComment = document.createElement('div');
+        addReComment.setAttribute('class', 'addReComment');
+        addReComment.innerText = `└ ${commentDetail}`;
+        recommentChild.appendChild(addReComment);
+
+        div.onclick = null;
+      }
+
+      /**
+       * ! 모두 입력되었을 때 댓글 게시하고, 하나라도 입력되어 있지 않으면 알림창 띄우기
+       */
+
+      function post() {
+        if (commentInput.value && nick.value && color.value) {
+          addComment();
+        } else {
+          alert('댓글 혹은 닉네임, 색깔이 입력되지 않았습니다.');
+        }
+      }
+
+      function enter() {
+        if (window.event.keyCode == 13) {
+          post();
+        }
+      }
+    </script>
   </body>
 </html>

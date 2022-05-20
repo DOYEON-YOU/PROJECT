@@ -215,8 +215,73 @@
 }
 
 .project {
-  height: 100vh;
+  height: 500vh;
   background-color: #101010;
+  color: white;
+  .titleBox {
+    height: 100vh;
+  }
+  .projects {
+    margin: 100px 0px 0px 0px;
+  }
+  .title {
+    font-family: 'LeferiBold';
+  }
+  .section {
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    border: 2px solid white;
+    height: 680px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 0px black, 8px 8px 0px white;
+    .explainBox {
+      margin: 20px;
+      font-family: 'LeferiRegular';
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .explain {
+        padding: 20px;
+        border: 1px solid white;
+        height: 470px;
+        border-radius: 20px;
+        font-size: 20px;
+        box-shadow: 5px 5px 0px black, 8px 8px 0px white;
+      }
+      .demoBtn {
+        margin-top: 40px;
+        width: 300px;
+        height: 70px;
+        font-size: 30px;
+        font-family: 'LeferiBold';
+        border-radius: 60px;
+        background-color: transparent;
+        border: 5px solid white;
+        color: white;
+        box-shadow: 5px 5px 0px black, 8px 8px 0px white;
+        transition: all 0.3s;
+        &:hover {
+          background-color: #303030;
+          transition: all 0.3s;
+        }
+        &:active {
+          background-color: #181818;
+          transform: translate(8px, 8px);
+          box-shadow: none;
+        }
+      }
+    }
+    .img {
+      img {
+        border-radius: 20px;
+        width: 580px;
+        height: 580px;
+        margin: 20px;
+        box-shadow: 5px 5px 0px black, 8px 8px 0px white;
+      }
+    }
+  }
 }
 
 .info {
