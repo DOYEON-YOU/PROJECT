@@ -23,7 +23,7 @@ const Info = props => {
             <FiRotateCcw size={50} />
           </motion.div>
         </a>
-        <Sidebar />
+        <Sidebar info={window.location.pathname === '/info' ? 'true' : 'false'}/>
       </div>
     </motion.div>
   );

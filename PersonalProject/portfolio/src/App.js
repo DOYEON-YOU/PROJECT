@@ -51,7 +51,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />} />
           <Route
-            path='/introduction'
+            path='/intro'
             element={
               <Introduction
                 variants={variants}

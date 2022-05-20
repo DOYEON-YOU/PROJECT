@@ -29,7 +29,7 @@ const Main = props => {
             data-aos='flip-up'
             data-aos-easing='ease-in-out'
             data-aos-duration='500'>
-            WELCOME
+            WELCOME TO
           </div>
           <div
             data-aos='flip-up'
@@ -46,9 +46,8 @@ const Main = props => {
           Front-End Junior Developer Portfolio <br />
           <span id='myName'>Kwon Doyeon</span>
         </div>
-        <Arrow next='introduction' />
-        <Sidebar />
-        <div className='hoverMe' data-aos='zoom-in'>Hover Me!</div>
+        <Arrow next='intro' />
+        <Sidebar main={window.location.pathname === '/' ? 'true' : 'false'}/>
       </div>
     </motion.div>
   );

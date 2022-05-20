@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect } from 'react';
 import Arrow from '../Components/Arrow';
 import Sidebar from '../Components/Sidebar';
@@ -90,7 +92,7 @@ const Introduction = props => {
           </Row>
         </Container>
         <Arrow next='stack' />
-        <Sidebar />
+        <Sidebar introduction={window.location.pathname === '/intro' ? 'true' : 'false'}/>
       </div>
     </motion.div>
   );

@@ -99,20 +99,6 @@
       cursor: default;
     }
   }
-  .hoverMe {
-    position: absolute;
-    writing-mode: vertical-rl;
-    font-family: 'LeferiBold';
-    font-size: 35px;
-    top: 150px;
-    right: 20px;
-    z-index: 1;
-    -webkit-text-stroke: 1px #ffffff;
-    color: transparent;
-    &:hover {
-      cursor: default;
-    }
-  }
 }
 
 .introduction {
@@ -199,29 +185,23 @@
       transition: all 0.4s;
     }
   }
-  .one:hover {
-    background-color: #e34f26;
-    transition: all 0.0001s;
+  .one {
+    border: 7px solid #e34f26;
   }
-  .two:hover {
-    background-color: #1572b6;
-    transition: all 0.0001s;
+  .two {
+    border: 7px solid #1572b6;
   }
-  .three:hover {
-    background-color: #cc6699;
-    transition: all 0.0001s;
+  .three {
+    border: 7px solid #f7df1e;
   }
-  .four:hover {
-    background-color: #f7df1e;
-    transition: all 0.0001s;
+  .four {
+    border: 7px solid #3178c6;
   }
-  .five:hover {
-    background-color: #3178c6;
-    transition: all 0.0001s;
+  .five {
+    border: 7px solid #61dafb;
   }
-  .six:hover {
-    background-color: #61dafb;
-    transition: all 0.0001s;
+  .six {
+    border: 7px solid #cc6699;
   }
   .clickBoxes {
     font-size: 40px;
@@ -233,7 +213,7 @@
 
 .project {
   height: 100vh;
-  background-color: rgb(142, 142, 142);
+  background-color: #101010;
 }
 
 .info {
@@ -261,10 +241,13 @@
     border: 2px solid white;
     opacity: 1;
   }
-  .html {
+  h4 {
+    font-family: 'LeferiRegular';
+    margin-bottom: 30px;
   }
   .skills {
-    margin: 30px 0px;
+    margin-top: 40px;
+    margin-bottom: 0;
     list-style: none;
     position: relative;
     display: flex;
@@ -297,6 +280,7 @@
   }
 }
 .skillList {
+  font-style: italic;
   color: white;
   width: 200px;
   height: 400px;
@@ -332,6 +316,8 @@
     background-color: white;
     color: black;
     font-family: 'LeferiBold';
+    text-decoration: underline;
+    text-underline-position: under;
   }
 }
 .exitIcon {
@@ -424,61 +410,50 @@
 
 .sidebarBox {
   z-index: 2;
-  background-color: rgba($color: #ffffff, $alpha: 0.5);
   position: fixed;
+  text-align: right;
   top: 100px;
-  right: -190px;
-  width: 200px;
+  right: 0px;
+  width: 180px;
   height: 400px;
   padding: 10px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   transition: all 0.5s;
-  color: black;
+  color: white;
   font-family: 'LeferiRegular';
   font-size: 20px;
   font-weight: bolder;
-  &:hover {
-    transition: all 1s;
-    transform: translateX(-195px);
-    box-shadow: 0px 10px 7px rgb(83, 83, 83);
-    background-color: rgba($color: #ffffff, $alpha: 1);
+  hr {
+    width: 150px;
+    margin: 0 auto;
   }
   .menu {
-    color: black;
+    font-style: italic;
     text-decoration: none;
-    padding: 18px 0px;
+    margin: 30px 0px;
     transition: all 0.5s;
+    font-size: 20px;
     a {
       text-decoration: none;
-      color: black;
+      color: white;
+      padding: 10px 12px;
+      position: relative;
     }
     &:hover {
       transition: all 0.5s;
-      font-weight: bolder;
       cursor: pointer;
-      background-color: black;
-      color: white;
-      a {
-        color: white;
-      }
+      transform: translateX(-5px);
     }
     &:first-child {
       margin-top: 20px;
     }
   }
-
-  hr {
-    margin: 0;
-  }
-
-  .circle {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto;
-    margin-top: 20px;
-    border-radius: 140px;
-    border: 5px solid black;
+  #true {
+    font-weight: bolder;
+    transition: all 0.5s;
+    text-decoration: underline;
+    text-underline-position: under;
   }
 }
 
