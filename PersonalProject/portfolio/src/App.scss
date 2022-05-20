@@ -157,6 +157,9 @@
     font-family: 'LeferiBold';
     margin-bottom: 30px;
     text-shadow: 7px 7px 0px black;
+    &:hover {
+      cursor: default;
+    }
   }
   .stackBox {
     z-index: 3;
@@ -244,39 +247,6 @@
   h4 {
     font-family: 'LeferiRegular';
     margin-bottom: 30px;
-  }
-  .skills {
-    margin-top: 40px;
-    margin-bottom: 0;
-    list-style: none;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 800px;
-    height: 30px;
-    text-align: center;
-    padding: 0;
-    &:before {
-      position: absolute;
-      top: -30px;
-      left: -5px;
-      color: #999;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 15px;
-    }
-    li {
-      width: 7.5%;
-      height: 13px;
-      border: 1px solid white;
-      background: transparent;
-      box-shadow: 0 0 7px 0 fade-out(white, 0.6);
-      display: inline-block;
-      transform: skew(-45deg);
-    }
-    .full {
-      background: white;
-    }
   }
 }
 .skillList {

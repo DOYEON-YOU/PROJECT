@@ -41,7 +41,6 @@ const Introduction = props => {
             <Col
               className='pBox'
               data-aos='flip-left'
-              data-aos-delay='300'
               data-aos-duration='3000'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
               rerum commodi excepturi, fugit saepe nemo laudantium eaque,
@@ -51,6 +50,7 @@ const Introduction = props => {
             <Col
               className='pBox'
               data-aos='flip-left'
+              data-aos-delay='300'
               data-aos-duration='3000'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
               rerum commodi excepturi, fugit saepe nemo laudantium eaque,
@@ -62,7 +62,7 @@ const Introduction = props => {
             <Col
               className='pBox'
               data-aos='flip-left'
-              data-aos-delay='1500'
+              data-aos-delay='600'
               data-aos-duration='3000'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
               rerum commodi excepturi, fugit saepe nemo laudantium eaque,
@@ -72,7 +72,7 @@ const Introduction = props => {
             <Col
               className='pBox'
               data-aos='flip-left'
-              data-aos-delay='2100'
+              data-aos-delay='900'
               data-aos-duration='3000'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
               rerum commodi excepturi, fugit saepe nemo laudantium eaque,
@@ -82,7 +82,7 @@ const Introduction = props => {
             <Col
               className='pBox'
               data-aos='flip-left'
-              data-aos-delay='2700'
+              data-aos-delay='1200'
               data-aos-duration='3000'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
               rerum commodi excepturi, fugit saepe nemo laudantium eaque,
