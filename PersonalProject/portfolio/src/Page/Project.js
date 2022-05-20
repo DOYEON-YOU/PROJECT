@@ -124,13 +124,16 @@ const Project = props => {
           </Row>
         </div>
         <div
-          className='todoList projects'
+          className='loginForm projects'
           data-aos='flip-left'
           data-aos-delay='300'>
           <h1 className='title' style={{ textAlign: 'left' }}>
             Log-In Form
           </h1>
           <Row className='section'>
+            <Col className='img'>
+              <img src='https://ifh.cc/g/GgnDg3.png' alt='commentProject' />
+            </Col>
             <Col className='explainBox'>
               <div className='explain'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
@@ -142,13 +145,10 @@ const Project = props => {
                 <button className='demoBtn'>Demo</button>
               </a>
             </Col>
-            <Col className='img'>
-              <img src='https://ifh.cc/g/GgnDg3.png' alt='commentProject' />
-            </Col>
           </Row>
         </div>
         <div
-          className='todoList projects'
+          className='register projects'
           data-aos='flip-right'
           data-aos-delay='300'>
           <h1 className='title' style={{ textAlign: 'right' }}>
@@ -162,12 +162,12 @@ const Project = props => {
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <a href='https://doyeon-you.github.io/ToDoList/' target='_blank'>
+              <a href='https://doyeon-you.github.io/Register/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
               </a>
             </Col>
             <Col className='img'>
-              <img src='https://ifh.cc/g/jAqQhA.png' alt='commentProject' />
+              <img src='https://ifh.cc/g/B9dhTC.png' alt='commentProject' />
             </Col>
           </Row>
         </div>
