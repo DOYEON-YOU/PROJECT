@@ -24,10 +24,6 @@ const Project = props => {
         opacity: { duration: 0.2 },
       }}>
       <div className='page project'>
-        <div className='titleBox'>
-          <h1>Mini Projects</h1>
-          <h4>HTML, CSS, JavaScript를 활용해 만든 미니 프로젝트들입니다.</h4>
-        </div>
         <div className='comment' data-aos='flip-left' data-aos-delay='300'>
           <h1 className='title' style={{ textAlign: 'left' }}>
             Comment

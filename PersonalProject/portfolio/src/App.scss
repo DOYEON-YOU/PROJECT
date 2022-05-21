@@ -66,17 +66,15 @@
 
   // first page welcome letter
   .welcome {
-    line-height: 260px;
+    line-height: 12rem;
     transition: all 0.4s;
     -webkit-text-stroke: 4px #ffffff;
-    font-size: 13rem;
+    font-size: 10rem;
     text-align: center;
     color: white;
     font-family: 'BlackHanSans', sans-serif;
     text-shadow: 20px 20px 0px #000, 24px 24px 0px rgb(255, 255, 255);
-    font-variation-settings: 'weight' 900;
     &:hover {
-      font-variation-settings: 'weight' 100;
       color: transparent;
       text-shadow: -20px -20px 0px rgb(255, 255, 255),
         -24px -24px 0px rgb(0, 0, 0);
@@ -85,10 +83,11 @@
   }
   // first page introduction letter
   .oneLineIntroduction {
-    font-size: 50px;
+    font-size: 4rem;
     font-family: 'LeferiBold';
     transition: all 0.4s;
-    line-height: 60px;
+    line-height: 5rem;
+    margin-top: 2rem;
     text-shadow: 1px 1px 5px white;
     #myName {
       -webkit-text-stroke: 1px #ffffff;
@@ -99,47 +98,146 @@
       cursor: default;
     }
   }
+  @media (max-width: 1920px) {
+    .welcome {
+      font-size: 7rem;
+      line-height: 9rem;
+      text-shadow: 10px 10px 0px #000, 13px 13px 0px rgb(255, 255, 255);
+      &:hover {
+        text-shadow: -10px -10px 0px rgb(255, 255, 255),
+          -13px -13px 0px rgb(0, 0, 0);
+      }
+    }
+    .oneLineIntroduction {
+      font-size: 3rem;
+      line-height: 4rem;
+      margin-top: 40px;
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    .welcome {
+      font-size: 2.5rem;
+      line-height: 3.4rem;
+      text-shadow: none;
+      font-family: 'LeferiBold';
+      letter-spacing: 3px;
+      text-shadow: 6px 0px 0px gray;
+      &:hover {
+        text-shadow: none;
+        -webkit-text-stroke: 0.5px #ffffff;
+      }
+    }
+    .oneLineIntroduction {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-top: 20px;
+    }
+  }
+  @media (min-height: 844px) {
+    .oneLineIntroduction {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  }
 }
 
-.introduction {
+.infoWrap {
+  display: flex;
   width: 100vw;
   height: 100vh;
-  color: white;
+  margin: 0 auto;
   background-color: #101010;
-  .sayHello {
-    width: 60vw;
-    font-family: 'LeferiBaseBold';
-    text-align: left;
-    margin: 50px;
-    h1 {
-      margin: 0;
-    }
-    h4 {
-      margin: 0;
-    }
-  }
-  .pBox {
-    display: flex;
-    border: 5px solid rgb(255, 255, 255);
-    box-shadow: 3px 3px 0px rgb(190, 190, 190), 20px 20px 0px rgb(255, 255, 255),
-      23px 23px 0px rgb(0, 0, 0);
-    margin: 20px;
-    height: 400px;
-    border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  .introduction {
     color: white;
-    font-family: 'LeferiRegular';
-    align-items: center;
-    font-size: 19px;
-    &:hover {
-      cursor: pointer;
-      background-color: white;
-      color: black;
-      font-weight: bolder;
+    .sayHello {
+      width: 50vw;
+      font-family: 'LeferiBaseBold';
+      text-align: left;
+      h1 {
+        margin: 0;
+        font-size: 4rem;
+      }
+      h4 {
+        margin: 0;
+        font-size: 2rem;
+      }
     }
-  }
-  img {
-    width: 500px;
-    display: inline-block;
+    .pBox {
+      display: flex;
+      border: 5px solid rgb(255, 255, 255);
+      box-shadow: 3px 3px 0px rgb(190, 190, 190),
+        20px 20px 0px rgb(255, 255, 255), 23px 23px 0px rgb(0, 0, 0);
+      margin: 20px;
+      width: 350px;
+      height: 300px;
+      border-radius: 10px;
+      color: white;
+      font-family: 'LeferiRegular';
+      align-items: center;
+      font-size: 19px;
+      &:hover {
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+      }
+    }
+    img {
+      width: 350px;
+      display: inline-block;
+    }
+    @media (max-width: 1920px) {
+      .sayHello {
+        h1 {
+          font-size: 3rem;
+        }
+        h4 {
+          font-size: 1.4rem;
+        }
+      }
+      .pBox {
+        height: 220px;
+        font-size: 1rem;
+      }
+      img {
+        width: 320px;
+      }
+    }
+    @media (min-width: 335px) and (max-width: 757px) {
+      height: 100vh;
+      background-color: #101010;
+      width: 90vw;
+      .sayHello {
+        margin-top: 30px;
+        width: 90vw;
+        h1 {
+          font-size: 1.4rem;
+        }
+        h4 {
+          margin-top: 3px;
+          font-size: 1rem;
+        }
+      }
+      .pBox {
+        margin: 5px;
+        height: 150px;
+        border: 1px solid white;
+        box-shadow: none;
+        padding: 5px;
+        display: block;
+        flex-direction: column;
+        font-size: 2px;
+        overflow: scroll;
+      }
+    }
+    @media (min-height: 844px) {
+      .pBox {
+        height: 200px;
+        font-size: 0.77rem;
+      }
+    }
   }
 }
 
@@ -153,7 +251,7 @@
   .title {
     z-index: 3;
     color: white;
-    font-size: 70px;
+    font-size: 5rem;
     font-family: 'LeferiBold';
     margin-bottom: 30px;
     text-shadow: 7px 7px 0px black;
@@ -207,20 +305,83 @@
     border: 7px solid #cc6699;
   }
   .clickBoxes {
-    font-size: 40px;
+    font-size: 3rem;
     font-family: 'LeferiBold';
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  @media (max-width: 1920px) {
+    .title {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+    .stackBox {
+      width: 230px;
+      height: 230px;
+      &:hover {
+        svg {
+          width: 120px;
+        }
+      }
+      svg {
+        width: 100px;
+      }
+    }
+    .clickBoxes {
+      font-size: 2.5rem;
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    .title {
+      font-size: 1.5rem;
+    }
+    .stackBox {
+      margin: 7px;
+      width: 100px;
+      height: 100px;
+      &:hover {
+        svg {
+          width: 70px;
+        }
+      }
+      svg {
+        width: 50px;
+      }
+    }
+    .one {
+      border: 3px solid #e34f26;
+    }
+    .two {
+      border: 3px solid #1572b6;
+    }
+    .three {
+      border: 3px solid #f7df1e;
+    }
+    .four {
+      border: 3px solid #3178c6;
+    }
+    .five {
+      border: 3px solid #61dafb;
+    }
+    .six {
+      border: 3px solid #cc6699;
+    }
+    .clickBoxes {
+      margin-top: 8px;
+      font-size: 1.3rem;
+      -webkit-text-stroke: 0.3px #ffffff;
+    }
   }
 }
 
 .project {
-  height: 500vh;
+  height: 400vh;
   background-color: #101010;
   color: white;
-  .titleBox {
-    height: 100vh;
-  }
   .projects {
     margin: 100px 0px 0px 0px;
   }
@@ -230,23 +391,25 @@
   .section {
     align-items: center;
     justify-content: center;
-    width: 50vw;
+    width: 1300px;
     border: 2px solid white;
     height: 680px;
     border-radius: 50px;
     box-shadow: 5px 5px 0px black, 8px 8px 0px white;
     .explainBox {
-      margin: 20px;
+      margin: 30px;
       font-family: 'LeferiRegular';
       flex-direction: column;
       align-items: center;
       justify-content: center;
       .explain {
-        padding: 20px;
+        display: flex;
+        padding: 5px;
+        align-items: center;
         border: 1px solid white;
         height: 470px;
         border-radius: 20px;
-        font-size: 20px;
+        font-size: 1.4rem;
         box-shadow: 5px 5px 0px black, 8px 8px 0px white;
       }
       .demoBtn {
@@ -276,10 +439,64 @@
       img {
         border-radius: 20px;
         width: 580px;
-        height: 580px;
         margin: 20px;
         box-shadow: 5px 5px 0px black, 8px 8px 0px white;
       }
+    }
+  }
+  @media (max-width: 1920px) {
+    height: 420vh;
+    .section {
+      width: 850px;
+      height: 490px;
+      .explainBox {
+        .explain {
+          height: 300px;
+          font-size: 1rem;
+        }
+        .demoBtn {
+          height: 65px;
+          width: 250px;
+          font-size: 1.4rem;
+        }
+      }
+      .img {
+        img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    width: 100vw;
+    height: 870vh;
+    .section {
+      height: 820px;
+      width: 350px;
+      padding: 10px;
+      .explainBox {
+        margin: 10px;
+        padding: 10px;
+        .explain {
+          font-size: 1.1rem;
+        }
+      }
+      .img {
+        img {
+          width: 300px;
+          height: auto;
+          position: relative;
+          margin: 0px;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  @media (min-height: 844px) {
+    height: 680vh;
+    .section{
+      height: 800px;
     }
   }
 }
@@ -302,16 +519,29 @@
   height: 100vh;
   .title {
     font-family: 'LeferiBold';
-    font-size: 70px;
+    font-size: 5rem;
   }
   hr {
     width: 50vw;
     border: 2px solid white;
     opacity: 1;
   }
-  h4 {
-    font-family: 'LeferiRegular';
-    margin-bottom: 30px;
+  @media (max-width: 1920px) {
+    .title {
+      font-size: 3rem;
+    }
+    hr {
+      border: 1px solid white;
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    .title {
+      font-size: 2rem;
+    }
+    hr {
+      margin: 0;
+      width: 60vw;
+    }
   }
 }
 .skillList {
@@ -321,6 +551,7 @@
   height: 400px;
   border: 1px solid rgba($color: #ffffff, $alpha: 0.4);
   position: fixed;
+  bottom: 500px;
   top: 500px;
   right: 100px;
   hr {
@@ -354,20 +585,41 @@
     text-decoration: underline;
     text-underline-position: under;
   }
+  @media (max-width: 1920px) {
+    width: 150px;
+    height: 400px;
+    top: 30vh;
+    right: 50px;
+    a {
+      font-size: 1rem;
+      &:hover {
+        font-size: 1.2rem;
+      }
+    }
+    .true {
+      font-size: 1.2rem;
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    display: none;
+  }
 }
 .exitIcon {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   background-color: white;
   color: black;
   border-radius: 50px;
   position: absolute;
   top: 100px;
   right: 100px;
+  line-height: 40px;
   font-size: 35px;
-  line-height: 35px;
   opacity: 0.7;
   transition: all 0.3s;
+  .ico {
+    width: 35px;
+  }
   &:hover {
     color: black;
     opacity: 1;
@@ -379,6 +631,26 @@
     box-shadow: none;
     background-color: rgb(179, 179, 179);
   }
+  @media (max-width: 1920px) {
+    width: 35px;
+    height: 35px;
+    line-height: 10px;
+    top: 50px;
+    right: 50px;
+    .ico {
+      width: 25px;
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    width: 25px;
+    height: 25px;
+    top: 30px;
+    right: 30px;
+    .ico {
+      transform: translateY(-5px);
+      width: 20px;
+    }
+  }
 }
 
 .arrows {
@@ -386,15 +658,16 @@
   top: 50vh;
   position: fixed;
   .arrow {
-    display: inline-block;
     transition: all 0.2s;
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    line-height: 30px;
+    line-height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
     svg {
-      line-height: 35px;
+      position: relative;
+      margin: 0 auto;
       color: black;
       padding: 7px;
     }
@@ -410,10 +683,23 @@
       box-shadow: none;
     }
   }
+  @media (max-width: 1920px) {
+    .arrow {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      svg {
+        width: 40px;
+        transform: translateY(-4px);
+      }
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    display: none;
+  }
 }
 
 .resetWrap {
-  position: absolute;
   right: 50px;
   top: 50vh;
   position: fixed;
@@ -441,6 +727,20 @@
       height: 49px;
     }
   }
+  @media (max-width: 1920px) {
+    .reset {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      svg {
+        width: 40px;
+        transform: translateY(-4px);
+      }
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    display: none;
+  }
 }
 
 .sidebarBox {
@@ -459,10 +759,6 @@
   font-family: 'LeferiRegular';
   font-size: 20px;
   font-weight: bolder;
-  hr {
-    width: 150px;
-    margin: 0 auto;
-  }
   .menu {
     font-style: italic;
     text-decoration: none;
@@ -490,6 +786,27 @@
     text-decoration: underline;
     text-underline-position: under;
   }
+  @media (max-width: 1920px) {
+    .menu {
+      font-size: 15px;
+    }
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    background-color: #101010;
+    width: 100vw;
+    height: 50px;
+    top: 0;
+    text-align: center;
+    .menu {
+      font-size: 0.8rem;
+      margin: -3px;
+      display: inline;
+    &:hover {
+      transform: translateX(0px);
+
+    }
+    }
+  }
 }
 
 .loading {
@@ -505,6 +822,16 @@
     margin: 0 auto;
     .loadLetter {
       margin-left: 100px;
+    }
+  }
+  @media (max-width: 1920px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 335px) and (max-width: 757px) {
+    .loadBox {
+      .loadLetter {
+        display: none;
+      }
     }
   }
 }
@@ -560,13 +887,46 @@
       box-shadow: none;
     }
   }
-}
-
-@keyframes drift {
-  from {
-    transform: rotate(0deg);
+  @media (max-width: 1920px) {
+    .errorMessage {
+      .enError {
+        font-size: 5rem;
+      }
+      .koError {
+        font-size: 2.4rem;
+      }
+      .returnPage {
+        margin-top: 70px;
+        width: 330px;
+        height: 70px;
+        font-size: 1.5rem;
+      }
+    }
   }
-  from {
-    transform: rotate(360deg);
+  @media (min-width: 335px) and (max-width: 757px) {
+    .errorMessage {
+      .enError {
+        font-size: 3rem;
+        text-shadow: 3px 3px 0px black, 6px 6px 0px white;
+        -webkit-text-stroke: 1px #ffffff;
+        margin-bottom: 30px;
+      }
+      hr {
+        width: 80vw;
+        margin: 0 auto;
+      }
+      .koErrorWrap {
+        margin-top: 30px;
+      }
+      .koError {
+        font-size: 1.4rem;
+      }
+      .returnPage {
+        font-size: 1rem;
+        width: 200px;
+        height: 50px;
+        margin-top: 50px;
+      }
+    }
   }
 }
