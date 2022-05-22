@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Arrow from '../Components/Arrow';
 import { motion } from 'framer-motion';
 import Sidebar from '../Components/Sidebar';
+import { Link } from 'react-router-dom';
 import { Col, Row } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -28,22 +29,22 @@ const Project = props => {
           <h1 className='title' style={{ textAlign: 'left' }}>
             Comment
           </h1>
-          <Row className='section'>
-            <Col className='img'>
+          <div className='section'>
+            <div className='img'>
               <img src='https://ifh.cc/g/pNMZYs.jpg' alt='commentProject' />
-            </Col>
-            <Col className='explainBox'>
+            </div>
+            <div className='explainBox'>
               <div className='explain'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
                 impedit culpa obcaecati repellat distinctio aperiam quia quasi
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <a href='https://doyeon-you.github.io/comment/' target='_blank'>
+              <Link to='https://doyeon-you.github.io/comment/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </a>
-            </Col>
-          </Row>
+              </Link>
+            </div>
+          </div>
         </div>
         <div
           className='calculator projects'
@@ -52,24 +53,24 @@ const Project = props => {
           <h1 className='title' style={{ textAlign: 'right' }}>
             Calculator
           </h1>
-          <Row className='section'>
-            <Col className='explainBox'>
+          <div className='section'>
+            <div className='explainBox'>
               <div className='explain'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
                 impedit culpa obcaecati repellat distinctio aperiam quia quasi
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <a
-                href='https://doyeon-you.github.io/calculator/'
+              <Link
+                to='https://doyeon-you.github.io/calculator/'
                 target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </a>
-            </Col>
-            <Col className='img'>
+              </Link>
+            </div>
+            <div className='img'>
               <img src='https://ifh.cc/g/wsBdF2.png' alt='commentProject' />
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
         <div
           className='bookMark projects'
@@ -78,22 +79,22 @@ const Project = props => {
           <h1 className='title' style={{ textAlign: 'left' }}>
             BookMark
           </h1>
-          <Row className='section'>
-            <Col className='img'>
+          <div className='section'>
+            <div className='img'>
               <img src='https://ifh.cc/g/gv10OZ.png' alt='commentProject' />
-            </Col>
-            <Col className='explainBox'>
+            </div>
+            <div className='explainBox'>
               <div className='explain'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
                 impedit culpa obcaecati repellat distinctio aperiam quia quasi
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <a href='https://doyeon-you.github.io/bookMark/' target='_blank'>
+              <Link to='https://doyeon-you.github.io/bookMark/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </a>
-            </Col>
-          </Row>
+              </Link>
+            </div>
+          </div>
         </div>
         <div
           className='todoList projects'
@@ -102,22 +103,22 @@ const Project = props => {
           <h1 className='title' style={{ textAlign: 'right' }}>
             To-Do List
           </h1>
-          <Row className='section'>
-            <Col className='explainBox'>
+          <div className='section'>
+            <div className='explainBox'>
               <div className='explain'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
                 impedit culpa obcaecati repellat distinctio aperiam quia quasi
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <a href='https://doyeon-you.github.io/ToDoList/' target='_blank'>
+              <Link to='https://doyeon-you.github.io/ToDoList/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </a>
-            </Col>
-            <Col className='img'>
+              </Link>
+            </div>
+            <div className='img'>
               <img src='https://ifh.cc/g/jAqQhA.png' alt='commentProject' />
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
         <div
           className='loginForm projects'
@@ -126,22 +127,24 @@ const Project = props => {
           <h1 className='title' style={{ textAlign: 'left' }}>
             Log-In Form
           </h1>
-          <Row className='section'>
-            <Col className='img'>
+          <div className='section'>
+            <div className='img'>
               <img src='https://ifh.cc/g/GgnDg3.png' alt='commentProject' />
-            </Col>
-            <Col className='explainBox'>
+            </div>
+            <div className='explainBox'>
               <div className='explain'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
                 impedit culpa obcaecati repellat distinctio aperiam quia quasi
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <a href='https://doyeon-you.github.io/loginForm/' target='_blank'>
+              <Link
+                to='https://doyeon-you.github.io/loginForm/'
+                target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </a>
-            </Col>
-          </Row>
+              </Link>
+            </div>
+          </div>
         </div>
         <div
           className='register projects'
@@ -150,22 +153,22 @@ const Project = props => {
           <h1 className='title' style={{ textAlign: 'right' }}>
             Register Form
           </h1>
-          <Row className='section'>
-            <Col className='explainBox'>
+          <div className='section'>
+            <div className='explainBox'>
               <div className='explain'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
                 impedit culpa obcaecati repellat distinctio aperiam quia quasi
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <a href='https://doyeon-you.github.io/Register/' target='_blank'>
+              <Link to='https://doyeon-you.github.io/Register/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </a>
-            </Col>
-            <Col className='img'>
+              </Link>
+            </div>
+            <div className='img'>
               <img src='https://ifh.cc/g/B9dhTC.png' alt='commentProject' />
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
         <Arrow next='info' />
         <Sidebar

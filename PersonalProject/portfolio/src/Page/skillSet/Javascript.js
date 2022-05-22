@@ -8,7 +8,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Javascript = () => {
-
   useEffect(() => {
     AOS.init();
   });

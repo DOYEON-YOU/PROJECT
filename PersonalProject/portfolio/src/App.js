@@ -39,12 +39,6 @@ function App() {
     },
   };
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  });
-
   return (
     <div className='App'>
       <AnimatePresence>
@@ -101,11 +95,8 @@ function App() {
             }
           />
           <Route path='/*' element={<NotFound />} />
-          <Route path='/loading' element={<Loading />} />
         </Routes>
       </AnimatePresence>
-
-      {loading ? <Loading /> : ''}
     </div>
   );
 }

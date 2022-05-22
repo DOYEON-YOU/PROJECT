@@ -16,7 +16,6 @@
 .App {
   margin: 0;
   text-align: center;
-  justify-content: center;
   align-content: center;
   width: 100vw;
   background-color: #101010;
@@ -58,10 +57,10 @@
   flex-flow: column;
   width: 100vw;
   margin: 0 auto;
-  justify-content: center;
 }
 
 .main {
+  justify-content: center;
   color: white;
   background-color: #101010;
   height: 100vh;
@@ -116,7 +115,7 @@
       margin-top: 30px;
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     .welcome {
       font-size: 2.3rem;
       line-height: 3.4rem;
@@ -135,23 +134,26 @@
       margin-top: 20px;
     }
   }
-  @media (min-height: 844px) and (max-height: 926px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .welcome {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
     .oneLineIntroduction {
-      font-size: 1.2rem;
-      line-height: 1.7rem;
+      font-size: 2.3rem;
+      line-height: 3rem;
     }
   }
 }
 
-.infoWrap {
+.introWrap {
+  justify-content: flex-start;
   display: flex;
   width: 100vw;
-  height: 120vh;
-  margin: 0 auto;
+  overflow: scroll;
   background-color: #101010;
-  align-items: center;
-  justify-content: center;
   .introduction {
+    padding: 50px 0px;
     color: white;
     .sayHello {
       width: 50vw;
@@ -211,13 +213,11 @@
         width: 320px;
       }
     }
-    @media (min-width: 335px) and (max-width: 757px) {
-      height: 230vh;
-      overflow: hidden;
+    @media (min-width: 335px) and (max-width: 767px) {
+      overflow: scroll;
       background-color: #101010;
       width: 100vw;
       .sayHello {
-        margin-top: 90vh;
         width: 80vw;
         h1 {
           font-size: 2rem;
@@ -231,22 +231,35 @@
         flex-direction: column;
       }
       .pBox {
+        display: flex;
+        justify-content: center;
         margin: 5px;
         width: 300px;
-        height: 170px;
+        height: 200px;
         border: 1px solid white;
         box-shadow: none;
         padding: 5px;
-        display: block;
         flex-direction: column;
         font-size: 1rem;
         overflow: scroll;
       }
     }
-    @media (min-height: 844px) and (max-height: 962px) {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .sayHello {
+        width: 60vw;
+        h1 {
+          font-size: 3rem;
+        }
+        h4 {
+          font-size: 1.3rem;
+        }
+      }
+      .wrap {
+        flex-direction: column;
+      }
       .pBox {
-        height: 200px;
-        font-size: 1rem;
+        width: 400px;
+        height: 300px;
       }
     }
   }
@@ -346,7 +359,7 @@
       font-size: 2.5rem;
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     .title {
       font-size: 1.5rem;
     }
@@ -387,19 +400,59 @@
       -webkit-text-stroke: 0.3px #ffffff;
     }
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .title {
+      font-size: 3rem;
+    }
+    .stackBox {
+      margin: 10px;
+      width: 220px;
+      height: 220px;
+      &:hover {
+        svg {
+          width: 120px;
+        }
+      }
+    }
+    .one {
+      border: 4px solid #e34f26;
+    }
+    .two {
+      border: 4px solid #1572b6;
+    }
+    .three {
+      border: 4px solid #f7df1e;
+    }
+    .four {
+      border: 4px solid #3178c6;
+    }
+    .five {
+      border: 4px solid #61dafb;
+    }
+    .six {
+      border: 4px solid #cc6699;
+    }
+    .clickBoxes {
+      font-size: 2rem;
+      -webkit-text-stroke: 0.5px #ffffff;
+    }
+  }
 }
 
 .project {
-  height: 390vh;
+  overflow: scroll;
   background-color: #101010;
   color: white;
+  padding: 50px 0px;
   .projects {
-    margin: 100px 0px 0px 0px;
+    margin: 30px;
   }
   .title {
+    margin-top: 30px;
     font-family: 'LeferiBold';
   }
   .section {
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 1300px;
@@ -450,17 +503,17 @@
       img {
         border-radius: 20px;
         width: 580px;
-        margin: 20px;
+        margin: 0px 30px;
         box-shadow: 5px 5px 0px black, 8px 8px 0px white;
       }
     }
   }
   @media (max-width: 1920px) {
-    height: 360vh;
     .section {
-      width: 850px;
+      width: 800px;
       height: 490px;
       .explainBox {
+        width: 300px;
         .explain {
           height: 300px;
           font-size: 1rem;
@@ -479,42 +532,56 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     width: 100vw;
-    height: 870vh;
+    flex-direction: column;
     .section {
-      height: 820px;
-      width: 350px;
+      display: flex;
+      flex-direction: column;
+      height: 760px;
+      width: 85vw;
       padding: 10px;
       .explainBox {
-        margin: 10px;
-        padding: 10px;
+        width: 70vw;
+        margin: 0px;
         .explain {
-          font-size: 1.1rem;
+          font-size: 1rem;
+        }
+        .demoBtn {
+          margin-top: 30px;
+          width: 130px;
+          font-size: 1.5em;
         }
       }
       .img {
+        margin: 20px 0px;
         img {
-          width: 300px;
+          width: 70vw;
           height: auto;
-          position: relative;
-          margin: 0px;
-          box-shadow: none;
         }
       }
     }
   }
-  @media (min-height: 844px) and (max-height: 926px) {
-    height: 680vh;
+  @media (min-width: 768px) and (max-width: 1024px) {
     .section {
-      height: 800px;
+      width: 90vw;
+      .explainBox {
+      }
+      .img {
+        img {
+          width: 40vw;
+          height: auto;
+        }
+      }
     }
   }
 }
 
 .info {
+  width: 100vw;
   height: 100vh;
-  background-color: rgb(178, 178, 178);
+  overflow: scroll;
+  background-color: #101010;
 }
 
 .skill {
@@ -545,13 +612,21 @@
       border: 1px solid white;
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     .title {
       font-size: 2rem;
     }
     hr {
       margin: 0;
       width: 60vw;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .title {
+      font-size: 3rem;
+    }
+    hr {
+      width: 80vw;
     }
   }
 }
@@ -562,7 +637,6 @@
   height: 400px;
   border: 1px solid rgba($color: #ffffff, $alpha: 0.4);
   position: fixed;
-  bottom: 500px;
   top: 500px;
   right: 100px;
   hr {
@@ -611,8 +685,30 @@
       font-size: 1.2rem;
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     display: none;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: auto;
+    border: none;
+    font-weight: bolder;
+    a {
+      display: inline;
+      font-size: 1.2rem;
+      padding: 0px;
+      margin: 0px 10px;
+    }
+    hr {
+      display: none;
+    }
+    .true {
+      font-size: 1.2rem;
+      color: white;
+      background-color: transparent;
+    }
   }
 }
 .exitIcon {
@@ -652,7 +748,7 @@
       width: 25px;
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     width: 25px;
     height: 25px;
     top: 30px;
@@ -705,7 +801,10 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
+    display: none;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
     display: none;
   }
 }
@@ -749,7 +848,10 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
+    display: none;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
     display: none;
   }
 }
@@ -802,19 +904,38 @@
       font-size: 15px;
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
+    font-weight: bolder;
     background-color: #101010;
     width: 100vw;
-    height: 50px;
+    height: auto;
     top: 0;
     text-align: center;
     padding: 0;
+    border-radius: 0px;
     .menu {
+      margin: -5px;
       font-size: 13px;
       display: inline;
       &:hover {
         transform: translateX(0px);
       }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #101010;
+    border-radius: 0px;
+    .menu {
+      font-size: 1.2rem;
+      margin: 15px 0px;
+      display: inline;
     }
   }
 }
@@ -837,7 +958,7 @@
   @media (max-width: 1920px) {
     font-size: 1.5rem;
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     .loadBox {
       .loadLetter {
         display: none;
@@ -913,7 +1034,7 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 757px) {
+  @media (min-width: 335px) and (max-width: 767px) {
     .errorMessage {
       .enError {
         font-size: 2.5rem;

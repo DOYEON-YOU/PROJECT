@@ -26,9 +26,9 @@ const HTML = () => {
         <hr />
       </motion.div>
       <Exit />
-        <SkillList
-          html={window.location.pathname === '/stack/html' ? 'true' : 'false'}
-        />
+      <SkillList
+        html={window.location.pathname === '/stack/html' ? 'true' : 'false'}
+      />
     </>
   );
 };

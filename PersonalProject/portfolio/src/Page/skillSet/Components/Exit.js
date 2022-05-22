@@ -2,12 +2,13 @@
 
 import React from 'react';
 import {FiX} from 'react-icons/fi'
+import { Link } from 'react-router-dom';
 
 const Exit = () => {
   return (
-    <a href='/stack' className='exitIcon'>
+    <Link to='/stack' className='exitIcon'>
       <FiX className='ico'/>
-    </a>
+    </Link>
   );
 };
 

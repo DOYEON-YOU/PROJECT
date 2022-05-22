@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SkillList = (props) => {
 
@@ -16,29 +17,29 @@ const SkillList = (props) => {
 
   return (
     <div className='skillList'>
-      <a href={location[0]} id='html' className={props.html}>
+      <Link to={location[0]} id='html' className={props.html}>
         HTML
-      </a>
+      </Link>
       <hr />
-      <a href={location[1]} id='css' className={props.css}>
+      <Link to={location[1]} id='css' className={props.css}>
         CSS
-      </a>
+      </Link>
       <hr />
-      <a href={location[2]} id='js' className={props.js}>
+      <Link to={location[2]} id='js' className={props.js}>
         JavaScript
-      </a>
+      </Link>
       <hr />
-      <a href={location[3]} id='ts' className={props.ts}>
+      <Link to={location[3]} id='ts' className={props.ts}>
         TypeScript
-      </a>
+      </Link>
       <hr />
-      <a href={location[4]} id='react' className={props.react}>
+      <Link to={location[4]} id='react' className={props.react}>
         React
-      </a>
+      </Link>
       <hr />
-      <a href={location[5]} id='sass' className={props.sass}>
+      <Link to={location[5]} id='sass' className={props.sass}>
         Sass
-      </a>
+      </Link>
     </div>
   );
 };

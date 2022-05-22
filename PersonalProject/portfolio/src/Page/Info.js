@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiRotateCcw } from 'react-icons/fi';
 import Sidebar from '../Components/Sidebar';
+import { Link } from 'react-router-dom';
 
 const Info = props => {
   return (
@@ -15,14 +16,14 @@ const Info = props => {
         opacity: { duration: 0.2 },
       }}>
       <div className='page info'>
-        <a href='/' className='resetWrap'>
+        <Link to='/' className='resetWrap'>
           <motion.div
             className='reset'
             whileHover={{ scale: 1.05, opacity: 1 }}
             whileTap={{ scale: 0.97 }}>
             <FiRotateCcw size={50} />
           </motion.div>
-        </a>
+        </Link>
         <Sidebar info={window.location.pathname === '/info' ? 'true' : 'false'}/>
       </div>
     </motion.div>
