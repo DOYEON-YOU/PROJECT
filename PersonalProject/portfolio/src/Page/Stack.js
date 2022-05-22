@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Arrow from '../Components/Arrow';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Sidebar from '../Components/Sidebar';
 import { Col, Row } from 'react-bootstrap';
 import AOS from 'aos';
@@ -11,6 +11,9 @@ const Stack = props => {
   useEffect(() => {
     AOS.init();
   });
+
+  const locationObject = useLocation();
+  const location = locationObject.pathname;
 
   return (
     <motion.div
@@ -120,9 +123,7 @@ const Stack = props => {
         </Row>
         <div className='clickBoxes'>Click On The Boxes! </div>
         <Arrow next='project' />
-        <Sidebar
-          stack={window.location.pathname === '/stack' ? 'true' : 'false'}
-        />
+        <Sidebar stack={location === '/stack'} />
       </div>
     </motion.div>
   );

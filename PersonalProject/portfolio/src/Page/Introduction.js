@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Arrow from '../Components/Arrow';
 import Sidebar from '../Components/Sidebar';
+import { useLocation } from 'react-router-dom';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import { Container, Col, Row } from 'react-bootstrap';
 import AOS from 'aos';
@@ -13,8 +14,8 @@ const Introduction = props => {
     AOS.init();
   });
 
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+  const locationObject = useLocation();
+  const location = locationObject.pathname;
 
   return (
     <motion.div
@@ -84,11 +85,7 @@ const Introduction = props => {
           </div>
         </div>
         <Arrow next='stack' />
-        <Sidebar
-          introduction={
-            window.location.pathname === '/intro' ? 'true' : 'false'
-          }
-        />
+        <Sidebar introduction={location === '/intro'} />
       </div>
     </motion.div>
   );

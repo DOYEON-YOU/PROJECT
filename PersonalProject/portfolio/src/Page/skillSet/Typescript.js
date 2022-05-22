@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import SkillList from './Components/SkillList';
 import Exit from './Components/Exit';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,6 +12,9 @@ const Typescript = () => {
   useEffect(() => {
     AOS.init();
   });
+
+  const locationObject = useLocation();
+  const location = locationObject.pathname;
 
   return (
     <>
@@ -26,9 +30,7 @@ const Typescript = () => {
         <hr />
       </motion.div>
       <Exit />
-      <SkillList
-        ts={window.location.pathname == '/stack/typescript' ? 'true' : 'false'}
-      />
+      <SkillList ts={location == '/stack/typescript' ? 'true' : 'false'} />
     </>
   );
 };

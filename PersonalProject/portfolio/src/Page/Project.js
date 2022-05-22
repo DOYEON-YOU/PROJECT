@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Arrow from '../Components/Arrow';
 import { motion } from 'framer-motion';
 import Sidebar from '../Components/Sidebar';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Col, Row } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -13,6 +13,9 @@ const Project = props => {
   useEffect(() => {
     AOS.init();
   });
+
+  const locationObject = useLocation();
+  const location = locationObject.pathname;
 
   return (
     <motion.div
@@ -171,9 +174,7 @@ const Project = props => {
           </div>
         </div>
         <Arrow next='info' />
-        <Sidebar
-          project={window.location.pathname === '/project' ? 'true' : 'false'}
-        />
+        <Sidebar project={location === '/project'} />
       </div>
     </motion.div>
   );

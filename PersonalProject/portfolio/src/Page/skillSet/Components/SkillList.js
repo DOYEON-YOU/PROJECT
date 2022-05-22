@@ -17,27 +17,27 @@ const SkillList = (props) => {
 
   return (
     <div className='skillList'>
-      <Link to={location[0]} id='html' className={props.html}>
+      <Link to={location[0]} className={props.html}>
         HTML
       </Link>
       <hr />
-      <Link to={location[1]} id='css' className={props.css}>
+      <Link to={location[1]} className={props.css}>
         CSS
       </Link>
       <hr />
-      <Link to={location[2]} id='js' className={props.js}>
+      <Link to={location[2]} className={props.js}>
         JavaScript
       </Link>
       <hr />
-      <Link to={location[3]} id='ts' className={props.ts}>
+      <Link to={location[3]} className={props.ts}>
         TypeScript
       </Link>
       <hr />
-      <Link to={location[4]} id='react' className={props.react}>
+      <Link to={location[4]} className={props.react}>
         React
       </Link>
       <hr />
-      <Link to={location[5]} id='sass' className={props.sass}>
+      <Link to={location[5]} className={props.sass}>
         Sass
       </Link>
     </div>

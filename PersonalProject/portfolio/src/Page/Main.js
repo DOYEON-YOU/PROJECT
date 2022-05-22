@@ -7,11 +7,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Sidebar from '../Components/Sidebar';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Main = props => {
   useEffect(() => {
     AOS.init();
   });
+
+  const locationObject = useLocation();
+  const location = locationObject.pathname;
 
   return (
     <motion.div
@@ -48,7 +52,7 @@ const Main = props => {
           <span id='myName'>Kwon Doyeon</span>
         </div>
         <Arrow next='intro' />
-        <Sidebar main={window.location.pathname === '/' ? 'true' : 'false'} />
+        <Sidebar main={location === '/'} />
       </div>
     </motion.div>
   );

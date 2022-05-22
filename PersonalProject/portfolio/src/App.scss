@@ -115,7 +115,7 @@
       margin-top: 30px;
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .welcome {
       font-size: 2.3rem;
       line-height: 3.4rem;
@@ -213,7 +213,7 @@
         width: 320px;
       }
     }
-    @media (min-width: 335px) and (max-width: 767px) {
+    @media (max-width: 767px) {
       overflow: scroll;
       background-color: #101010;
       width: 100vw;
@@ -359,7 +359,7 @@
       font-size: 2.5rem;
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .title {
       font-size: 1.5rem;
     }
@@ -532,7 +532,7 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     width: 100vw;
     flex-direction: column;
     .section {
@@ -556,7 +556,7 @@
       .img {
         margin: 20px 0px;
         img {
-          width: 70vw;
+          width: 270px;
           height: auto;
         }
       }
@@ -612,7 +612,7 @@
       border: 1px solid white;
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .title {
       font-size: 2rem;
     }
@@ -621,7 +621,7 @@
       width: 60vw;
     }
   }
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width:768px) and (max-width: 1024px) {
     .title {
       font-size: 3rem;
     }
@@ -685,7 +685,7 @@
       font-size: 1.2rem;
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     display: none;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -748,7 +748,7 @@
       width: 25px;
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     width: 25px;
     height: 25px;
     top: 30px;
@@ -801,7 +801,7 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     display: none;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -848,7 +848,7 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     display: none;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -893,7 +893,7 @@
       margin-top: 20px;
     }
   }
-  #true {
+  .true {
     font-weight: bolder;
     transition: all 0.5s;
     text-decoration: underline;
@@ -904,7 +904,7 @@
       font-size: 15px;
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     font-weight: bolder;
     background-color: #101010;
     width: 100vw;
@@ -958,7 +958,7 @@
   @media (max-width: 1920px) {
     font-size: 1.5rem;
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .loadBox {
       .loadLetter {
         display: none;
@@ -1034,7 +1034,7 @@
       }
     }
   }
-  @media (min-width: 335px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .errorMessage {
       .enError {
         font-size: 2.5rem;

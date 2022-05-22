@@ -21,7 +21,7 @@ function App() {
   const variants = {
     enter: direction => {
       return {
-        x: direction > 0 ? 1000 : 1000,
+        x: direction > 0 ? 1000 : -1000,
         opacity: 0,
       };
     },
@@ -33,7 +33,7 @@ function App() {
     exit: direction => {
       return {
         zIndex: 0,
-        x: direction < 0 ? -1000 : -1000,
+        x: direction < 0 ? -1000 : 1000,
         opacity: 0,
       };
     },

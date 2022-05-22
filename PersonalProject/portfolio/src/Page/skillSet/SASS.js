@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import SkillList from './Components/SkillList';
 import Exit from './Components/Exit';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -11,6 +12,9 @@ const SASS = () => {
   useEffect(() => {
     AOS.init();
   });
+
+  const locationObject = useLocation();
+  const location = locationObject.pathname;
 
   return (
     <>
@@ -26,9 +30,7 @@ const SASS = () => {
         <hr />
       </motion.div>
       <Exit />
-      <SkillList
-        sass={window.location.pathname === '/stack/sass' ? 'true' : 'false'}
-      />
+      <SkillList sass={location === '/stack/sass' ? 'true' : 'false'} />
     </>
   );
 };
