@@ -43,9 +43,9 @@ const Project = props => {
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <Link to='https://doyeon-you.github.io/comment/' target='_blank'>
+              <a href='https://doyeon-you.github.io/comment/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -64,11 +64,11 @@ const Project = props => {
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <Link
-                to='https://doyeon-you.github.io/calculator/'
+              <a
+                href='https://doyeon-you.github.io/calculator/'
                 target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </Link>
+              </a>
             </div>
             <div className='img'>
               <img src='https://ifh.cc/g/wsBdF2.png' alt='commentProject' />
@@ -93,9 +93,9 @@ const Project = props => {
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <Link to='https://doyeon-you.github.io/bookMark/' target='_blank'>
+              <a href='https://doyeon-you.github.io/bookMark/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -114,9 +114,9 @@ const Project = props => {
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <Link to='https://doyeon-you.github.io/ToDoList/' target='_blank'>
+              <a href='https://doyeon-you.github.io/ToDoList/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </Link>
+              </a>
             </div>
             <div className='img'>
               <img src='https://ifh.cc/g/jAqQhA.png' alt='commentProject' />
@@ -141,11 +141,11 @@ const Project = props => {
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <Link
-                to='https://doyeon-you.github.io/loginForm/'
+              <a
+                href='https://doyeon-you.github.io/loginForm/'
                 target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -164,9 +164,9 @@ const Project = props => {
                 odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
                 quas, doloremque aliquid magni.
               </div>
-              <Link to='https://doyeon-you.github.io/Register/' target='_blank'>
+              <a href='https://doyeon-you.github.io/Register/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
-              </Link>
+              </a>
             </div>
             <div className='img'>
               <img src='https://ifh.cc/g/B9dhTC.png' alt='commentProject' />
