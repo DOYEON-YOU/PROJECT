@@ -173,6 +173,32 @@ const Project = props => {
             </div>
           </div>
         </div>
+        <div
+          className='album projects'
+          data-aos='flip-left'
+          data-aos-delay='300'>
+          <h1 className='title' style={{ textAlign: 'left' }}>
+            Album
+          </h1>
+          <div className='section'>
+            <div className='img'>
+              <img src='https://ifh.cc/g/mclOat.png' alt='commentProject' />
+            </div>
+            <div className='explainBox'>
+              <div className='explain'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+                impedit culpa obcaecati repellat distinctio aperiam quia quasi
+                odit, earum sit, ipsa veritatis suscipit reiciendis soluta et
+                quas, doloremque aliquid magni.
+              </div>
+              <a
+                href='https://doyeon-you.github.io/Album/'
+                target='_blank'>
+                <button className='demoBtn'>Demo</button>
+              </a>
+            </div>
+          </div>
+        </div>
         <Arrow next='info' />
         <Sidebar project={location === '/project'} />
       </div>
