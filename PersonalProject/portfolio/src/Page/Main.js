@@ -1,13 +1,13 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import Arrow from '../Components/Arrow';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Sidebar from '../Components/Sidebar';
-import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Loading from '../Components/Loading';
 
 const Main = props => {
   useEffect(() => {
@@ -16,6 +16,13 @@ const Main = props => {
 
   const locationObject = useLocation();
   const location = locationObject.pathname;
+
+  let [load, setLoad] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 1000);
+  });
 
   return (
     <motion.div
@@ -27,6 +34,7 @@ const Main = props => {
         x: { type: 'spring', stiffness: 300, damping: 30 },
         opacity: { duration: 0.2 },
       }}>
+      {load == true ? <Loading /> : null}
       <div className='page main'>
         <div className='welcome'>
           <div
@@ -48,7 +56,7 @@ const Main = props => {
           data-aos='fade-up'
           data-aos-duration='3000'
           data-aos-delay='1000'>
-          Front-End Junior Developer Portfolio <br />
+          Junior Front-End Developer Portfolio <br />
           <span id='myName'>Kwon Doyeon</span>
         </div>
         <Arrow next='intro' />
