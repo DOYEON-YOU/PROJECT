@@ -28,6 +28,10 @@ const SASS = () => {
           SASS(SCSS)
         </h1>
         <hr />
+        <div className='skillExplain'>
+          <p>중첩 CSS를 능숙하게 작성할 수 있습니다.</p>
+          <p>변수에 스타일을 할당하여 사용할 수 있습니다.</p>
+        </div>
       </motion.div>
       <Exit />
       <SkillList sass={location === '/stack/sass' ? 'true' : 'false'} />

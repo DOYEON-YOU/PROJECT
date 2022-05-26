@@ -28,6 +28,16 @@ const HTML = () => {
           HTML
         </h1>
         <hr />
+        <div className='skillExplain'>
+          <p>적절한 태그를 골라 사용할 수 있습니다.</p>
+          <p>
+            블록(Block)과 인라인(Inline) 요소의 차이점을 명확히 알고 있습니다.
+          </p>
+          <p>
+            List와 Table을 적절히 사용할 수 있으며, Form 요소를 용도에 맞게
+            사용할 수 있습니다.
+          </p>
+        </div>
       </motion.div>
       <Exit />
       <SkillList html={location === '/stack/html' ? 'true' : 'false'} />
