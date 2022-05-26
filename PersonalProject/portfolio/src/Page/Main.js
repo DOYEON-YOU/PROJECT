@@ -10,15 +10,13 @@ import { useLocation } from 'react-router-dom';
 import Loading from '../Components/Loading';
 
 const Main = props => {
-  useEffect(() => {
-    AOS.init();
-  });
 
   const locationObject = useLocation();
   const location = locationObject.pathname;
 
   let [load, setLoad] = useState(true);
   useEffect(() => {
+    AOS.init();
     setTimeout(() => {
       setLoad(false);
     }, 1000);

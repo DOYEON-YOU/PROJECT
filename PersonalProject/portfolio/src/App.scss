@@ -595,6 +595,124 @@
   height: 100vh;
   overflow: scroll;
   background-color: #101010;
+  justify-content: center;
+  color: white;
+  .infoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px solid white;
+    width: 600px;
+    height: 700px;
+    font-family: 'LeferiBold';
+    .aboutMe {
+      font-size: 3.5rem;
+      margin-bottom: 50px;
+      &:hover {
+        cursor: default;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    .shortCut {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 350px;
+      border-radius: 30px;
+      height: 70px;
+      background-color: white;
+      color: black;
+      margin: 10px;
+      transition: all 0.3s;
+      border: 2px solid white;
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        font-size: 1.6rem;
+        transition: all 0.3s;
+      }
+    }
+  }
+  .firstPage {
+    position: absolute;
+    right: 30px;
+    font-size: 1.6rem;
+    font-family: 'LeferiRegular';
+    line-height: 2.3rem;
+    bottom: 40vh;
+  }
+  @media (max-width: 1920px) {
+    .firstPage {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      right: 35px;
+    }
+  }
+  @media (max-width: 767px) {
+    .infoBox {
+      border: 1px solid white;
+      .aboutMe {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      width: 330px;
+      height: 500px;
+      .shortCut {
+        width: 250px;
+        height: 40px;
+        font-size: 1rem;
+        svg {
+          width: 30px;
+        }
+      }
+    }
+    .firstPage {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .firstPage {
+      display: none;
+    }
+  }
+}
+.thxWrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .thx {
+    font-size: 5rem;
+    font-family: 'BlackHanSans';
+    -webkit-text-stroke: 2px #ffffff;
+    color: transparent;
+    &:hover {
+      cursor: default;
+    }
+  }
+  @media (max-width: 1920px) {
+    .thx {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .thx {
+      font-size: 2.4rem;
+      -webkit-text-stroke: 1px #ffffff;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .thx {
+      padding: 10px;
+    }
+  }
 }
 
 .skill {
@@ -629,8 +747,18 @@
     hr {
       border: 1px solid white;
     }
+    .skillExplain {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
   }
   @media (max-width: 767px) {
+    .skillExplain {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      line-height: 1.1rem;
+    }
     .title {
       font-size: 2rem;
     }
@@ -639,7 +767,11 @@
       width: 60vw;
     }
   }
-  @media (min-width:768px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .skillExplain {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+    }
     .title {
       font-size: 3rem;
     }
@@ -853,6 +985,7 @@
       background-color: rgb(156, 156, 156);
       width: 49px;
       height: 49px;
+      box-shadow: none;
     }
   }
   @media (max-width: 1920px) {
@@ -929,7 +1062,7 @@
     height: auto;
     top: 0;
     text-align: center;
-    padding: 0;
+    padding: 5px;
     border-radius: 0px;
     .menu {
       margin: -5px;
@@ -943,13 +1076,13 @@
   @media (min-width: 768px) and (max-width: 1024px) {
     top: 0;
     right: 0;
-    padding: 0;
     width: 100vw;
     height: auto;
     margin: 0 auto;
     text-align: center;
     background-color: #101010;
     border-radius: 0px;
+    padding: 10px;
     .menu {
       font-size: 1.2rem;
       margin: 15px 0px;
