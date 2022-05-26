@@ -26,15 +26,7 @@ const Info = props => {
   });
 
   return (
-    <motion.div
-      variants={props.variants}
-      initial={props.enter}
-      animate={props.center}
-      exit={props.exit}
-      transition={{
-        x: { type: 'spring', stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      }}>
+    <>
       {load == true ? <Thx /> : null}
       <div className='page info'>
         <div className='infoBox' data-aos='flip-left'>
@@ -77,7 +69,7 @@ const Info = props => {
         </Link>
         <Sidebar info={location === '/info'} />
       </div>
-    </motion.div>
+    </>
   );
 };
 

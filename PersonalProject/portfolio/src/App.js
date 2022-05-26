@@ -93,17 +93,7 @@ function App() {
               />
             }
           />
-          <Route
-            path='/info'
-            element={
-              <Info
-                variants={variants}
-                enter={variants.enter}
-                center={variants.center}
-                exit={variants.exit}
-              />
-            }
-          />
+          <Route path='/info' element={<Info />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </AnimatePresence>
