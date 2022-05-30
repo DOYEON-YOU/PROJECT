@@ -10,7 +10,6 @@ import { useLocation } from 'react-router-dom';
 import Loading from '../Components/Loading';
 
 const Main = props => {
-
   const locationObject = useLocation();
   const location = locationObject.pathname;
 
@@ -32,34 +31,37 @@ const Main = props => {
         x: { type: 'spring', stiffness: 300, damping: 30 },
         opacity: { duration: 0.2 },
       }}>
-      {load == true ? <Loading /> : null}
-      <div className='page main'>
-        <div className='welcome'>
-          <div
-            data-aos='flip-up'
-            data-aos-easing='ease-in-out'
-            data-aos-duration='500'>
-            WELCOME TO
+      {load === true ? (
+        <Loading />
+      ) : (
+        <div className='page main'>
+          <div className='welcome'>
+            <div
+              data-aos='flip-up'
+              data-aos-easing='ease-in-out'
+              data-aos-duration='500'>
+              WELCOME TO
+            </div>
+            <div
+              data-aos='flip-up'
+              data-aos-easing='ease-in-out'
+              data-aos-duration='500'
+              data-aos-delay='500'>
+              MY PORTFOLIO
+            </div>
           </div>
           <div
-            data-aos='flip-up'
-            data-aos-easing='ease-in-out'
-            data-aos-duration='500'
-            data-aos-delay='500'>
-            MY PORTFOLIO
+            className='oneLineIntroduction'
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            data-aos-delay='1000'>
+            Junior Front-End Developer Portfolio <br />
+            <span id='myName'>Kwon Doyeon</span>
           </div>
+          <Arrow next='intro' />
+          <Sidebar main={location === '/'} />
         </div>
-        <div
-          className='oneLineIntroduction'
-          data-aos='fade-up'
-          data-aos-duration='3000'
-          data-aos-delay='1000'>
-          Junior Front-End Developer Portfolio <br />
-          <span id='myName'>Kwon Doyeon</span>
-        </div>
-        <Arrow next='intro' />
-        <Sidebar main={location === '/'} />
-      </div>
+      )}
     </motion.div>
   );
 };

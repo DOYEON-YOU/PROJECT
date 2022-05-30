@@ -105,9 +105,11 @@ const Project = props => {
           <div className='section'>
             <div className='explainBox'>
               <div className='explain'>
-                작성 이후 우측 상단 버튼을 누르면 자신이 작성한 투두리스트를
-                이미지 파일로 저장하거나, 클립보드에 복사할 수 있게끔 구현한
-                투두리스트입니다.
+                이름을 입력할 수 있는 Input과 할 일을 중요하게 할 일과 필요한
+                일로 나누어 작성하게끔 폼을 나누었습니다. 작성 이후 우측 상단
+                Save나 Copy 버튼을 누르면 자신이 작성한 투두리스트를 이미지
+                파일로 저장하거나, 클립보드에 복사할 수 있게끔 html2canvas
+                라이브러리를 사용해 구현한 투두리스트입니다.
               </div>
               <a href='https://doyeon-you.github.io/ToDoList/' target='_blank'>
                 <button className='demoBtn'>Demo</button>
@@ -177,10 +179,11 @@ const Project = props => {
             </div>
             <div className='explainBox'>
               <div className='explain'>
-                파일을 받아와 Upload 버튼을 누르면 사진을 올려주는 앨범에 Zoom
-                라이브러리를 사용하지 않고 사진을 클릭했을 때 사진을 확대하는
-                기능을 넣어 구현해 본 앨범입니다. 사진을 Zoom 한 후 다시 메인
-                화면으로 돌아왔을 때 사진이 우측으로 조금 이동하는 오류가
+                input file을 이용하여 파일을 받아와 upload 버튼을 누르면 사진을
+                올려주는 앨범을 구현해 보았습니다. Zoom 라이브러리를 따로
+                사용하지 않고 사진을 클릭했을 때 사진을 확대해 볼 수 있는 기능도
+                함께 구현해 본 프로젝트입니다. 사진을 Zoom 한 후 다시
+                메인 화면으로 돌아왔을 때 사진이 우측으로 조금 이동하는 오류가
                 있으나, 해결 중에 있습니다.
               </div>
               <a href='https://doyeon-you.github.io/Album/' target='_blank'>

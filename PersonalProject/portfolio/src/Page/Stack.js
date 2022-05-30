@@ -121,7 +121,7 @@ const Stack = props => {
             </Col>
           </Link>
         </Row>
-        <div className='clickBoxes'>Click On The Boxes! </div>
+        <div className='clickBoxes'>박스를 클릭하시면 기술 스택에 대한 상세한 설명을 보실 수 있습니다. </div>
         <Arrow next='project' />
         <Sidebar stack={location === '/stack'} />
       </div>

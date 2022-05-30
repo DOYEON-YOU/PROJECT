@@ -177,7 +177,7 @@
         text-align: center;
       }
       text-align: left;
-      padding: 10px;
+      padding: 30px;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -185,8 +185,8 @@
       box-shadow: 3px 3px 0px rgb(190, 190, 190),
         10px 10px 0px rgb(255, 255, 255), 15px 15px 0px rgb(0, 0, 0);
       margin: 20px;
-      width: 30vw;
-      height: 600px;
+      width: 35vw;
+      height: auto;
       border-radius: 40px;
       color: white;
       font-family: 'LeferiRegular';
@@ -213,9 +213,9 @@
         }
       }
       .pBox {
-        padding: 10px;
+        padding: 30px;
         width: 40vw;
-        height: 600px;
+        height: auto;
         font-size: 1rem;
       }
       img {
@@ -227,6 +227,7 @@
       background-color: #101010;
       width: 100vw;
       .sayHello {
+        margin-top: 10px;
         width: 80vw;
         h1 {
           font-size: 2rem;
@@ -243,11 +244,11 @@
         display: flex;
         justify-content: center;
         margin: 5px;
-        width: 300px;
-        height: 700px;
+        width: 90vw;
+        height: auto;
         border: 1px solid white;
         box-shadow: none;
-        padding: 10px;
+        padding: 30px;
         flex-direction: column;
         font-size: 1rem;
         overflow: scroll;
@@ -258,6 +259,7 @@
     }
     @media (min-width: 768px) and (max-width: 1024px) {
       .sayHello {
+        margin-top: 10px;
         width: 60vw;
         h1 {
           font-size: 3rem;
@@ -271,7 +273,8 @@
       }
       .pBox {
         width: 500px;
-        height: 550px;
+        height: auto;
+        padding: 30px;
       }
       .edu {
         height: 200px;
@@ -344,10 +347,9 @@
     border: 7px solid #cc6699;
   }
   .clickBoxes {
-    font-size: 3rem;
-    font-family: 'LeferiBold';
-    color: transparent;
-    -webkit-text-stroke: 1px #ffffff;
+    font-size: 2rem;
+    font-family: 'LeferiRegular';
+    color: white;
     &:hover {
       cursor: default;
     }
@@ -359,19 +361,20 @@
       margin-bottom: 15px;
     }
     .stackBox {
-      width: 230px;
-      height: 230px;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
       &:hover {
         svg {
-          width: 120px;
+          width: 100px;
         }
       }
       svg {
-        width: 100px;
+        width: 80px;
       }
     }
     .clickBoxes {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
     }
   }
   @media (max-width: 767px) {
@@ -411,8 +414,8 @@
     }
     .clickBoxes {
       margin-top: 8px;
-      font-size: 1.3rem;
-      -webkit-text-stroke: 0.3px #ffffff;
+      font-size: 1rem;
+      padding: 10px;
     }
   }
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -448,8 +451,7 @@
       border: 4px solid #cc6699;
     }
     .clickBoxes {
-      font-size: 2rem;
-      -webkit-text-stroke: 0.5px #ffffff;
+      font-size: 1.5rem;
     }
   }
 }
@@ -483,7 +485,7 @@
       justify-content: center;
       .explain {
         display: flex;
-        padding: 5px;
+        padding: 30px;
         align-items: center;
         border: 1px solid white;
         height: 470px;
@@ -530,6 +532,7 @@
       .explainBox {
         width: 300px;
         .explain {
+          padding: 20px;
           height: 300px;
           font-size: 1rem;
         }
@@ -561,6 +564,7 @@
         margin: 0px;
         .explain {
           font-size: 1rem;
+          padding: 10px;
         }
         .demoBtn {
           margin-top: 30px;
@@ -638,19 +642,22 @@
       }
     }
   }
-  .firstPage {
-    position: absolute;
-    right: 30px;
-    font-size: 1.6rem;
-    font-family: 'LeferiRegular';
-    line-height: 2.3rem;
-    bottom: 40vh;
-  }
   @media (max-width: 1920px) {
-    .firstPage {
-      font-size: 1.3rem;
-      line-height: 1.8rem;
-      right: 35px;
+    .infoBox {
+      width: 500px;
+      height: 600px;
+      .aboutMe {
+        font-size: 3rem;
+        margin-bottom: 30px;
+      }
+      .shortCut {
+        width: 300px;
+        height: 50px;
+        font-size: 1.3rem;
+        &:hover {
+          font-size: 1.35rem;
+        }
+      }
     }
   }
   @media (max-width: 767px) {
@@ -674,14 +681,8 @@
         }
       }
     }
-    .firstPage {
-      display: none;
-    }
   }
   @media (min-width: 768px) and (max-width: 1024px) {
-    .firstPage {
-      display: none;
-    }
     .infoBox {
       .shortCut {
         font-size: 1.4rem;
@@ -1073,12 +1074,16 @@
     height: auto;
     top: 0;
     text-align: center;
-    padding: 5px;
     border-radius: 0px;
+    padding: 8px 0px;
     .menu {
+      display: inline-block;
+      vertical-align: middle;
       margin: -5px;
       font-size: 13px;
-      display: inline;
+      &:first-child {
+        margin: 0;
+      }
       &:hover {
         transform: translateX(0px);
       }
@@ -1089,15 +1094,21 @@
     right: 0;
     width: 100vw;
     height: auto;
+    padding: 0;
     margin: 0 auto;
     text-align: center;
     background-color: #101010;
     border-radius: 0px;
-    padding: 10px;
     .menu {
+      color: white;
+      margin: 0;
+      padding: 15px 0px;
       font-size: 1.2rem;
-      margin: 15px 0px;
-      display: inline;
+      display: inline-block;
+      vertical-align: middle;
+      &:first-child {
+        margin: 0;
+      }
     }
   }
 }
