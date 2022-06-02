@@ -7,7 +7,7 @@ import Sidebar from '../Components/Sidebar';
 import { Link, useLocation } from 'react-router-dom';
 import { BsGithub } from 'react-icons/bs';
 import { SiNotion } from 'react-icons/si';
-import { AiTwotoneMail } from 'react-icons/ai';
+import { AiTwotoneMail, AiOutlineLink, AiOutlineContacts } from 'react-icons/ai';
 import { IoCall } from 'react-icons/io5';
 import Thx from '../Components/Thx';
 import AOS from 'aos';
@@ -33,7 +33,7 @@ const Info = props => {
         <div className='page info'>
           <div className='infoBox' data-aos='flip-left'>
             <div className='aboutMe'>About Me</div>
-            <h2>📞 Contact</h2>
+            <h2><AiOutlineContacts/> Contact</h2>
             <a href='mailto:fjdksla3@gmail.com'>
               <div className='shortCut'>
                 <AiTwotoneMail style={{ marginRight: '10px' }} size={40} />
@@ -47,7 +47,7 @@ const Info = props => {
               </div>
             </a>
             <br />
-            <h2>🔗 Pages</h2>
+            <h2><AiOutlineLink/> Pages</h2>
             <a href='https://github.com/DOYEON-YOU' target='_blank'>
               <div className='shortCut'>
                 <BsGithub style={{ marginRight: '10px' }} size={40} />{' '}
